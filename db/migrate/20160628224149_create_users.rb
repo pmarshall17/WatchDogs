@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :first_name
     	t.string :last_name
     	t.string :email
-    	t.integer :zip
+    	t.string :zip_code
     	t.has_many :favorites
 
       t.timestamps null: false

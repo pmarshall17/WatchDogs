@@ -1,5 +1,11 @@
 class ApisController < ApplicationController
   def index
+  	@apis = api(ENV[''])
+  end
+
+  def create
+  	res = api.update(params[:api])
+  	render json { api: res}
   end
 
   def show
@@ -9,5 +15,9 @@ class ApisController < ApplicationController
   end
 
   def new
+  end
+
+  def private
+  	
   end
 end
