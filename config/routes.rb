@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 
+  root 'compilations#index'
+  resources :compilations do 
+    resources :favorites
+  end
 end
