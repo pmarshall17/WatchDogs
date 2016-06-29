@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :favorites 
   end
   resources :apis
-  resources :quizs
+  resources :quizzes
 end

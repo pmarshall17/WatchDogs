@@ -1,2 +1,2 @@
-module QuizsHelper
+module QuizzesHelper
 end
