@@ -1,11 +1,8 @@
 class ApisController < ApplicationController
   def index
-  	@apis = api(ENV[''])
   end
 
   def create
-  	res = api.update(params[:api])
-  	render json { api: res}
   end
 
   def show
