@@ -11,4 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
-/config/api.yml
+/config/petfinder.yml
