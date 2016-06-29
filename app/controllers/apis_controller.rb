@@ -1,19 +1,19 @@
 class ApisController < ApplicationController
+   before_action :quiz, only: [:show]
+
   def index
+    @apis = Api.all
+  end
+  
+  def show  
   end
 
-  def create
+  private
+
+  def api
+     @api = Api.find(params[:id])
   end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def new
-  end
-
-  def private
+  def api_params
   end
 end

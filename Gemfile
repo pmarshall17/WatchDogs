@@ -23,7 +23,7 @@ gem 'materialize-sass'
 
 gem 'react-rails'
 
-gem 'httparty'
+gem 'petfinder'
 
 gem 'devise'
 

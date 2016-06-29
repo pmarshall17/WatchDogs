@@ -22,4 +22,8 @@ class CompilationsController < ApplicationController
   	@compilation = Compilation.find(params[:id])
   end
 
+  def compilation_params
+    
+  end
+
 end
