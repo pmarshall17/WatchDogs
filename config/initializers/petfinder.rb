@@ -9,5 +9,6 @@ if Rails.env.development?
 end
 
 Petfinder.configure do |config|
-  config.consumer_key = ENV['CONSUMER_KEY']
-  config.consumer_secret = ENV['CONSUMER_SECRET']
+  config.api_key = ENV['CONSUMER_KEY']
+  config.api_secret = ENV['CONSUMER_SECRET']
+end
