@@ -1,5 +1,5 @@
 class QuizsController < ApplicationController
-  before_action :quiz, only: [:show, :edit]
+
   def index
     @quizzes = Quiz.all
   end
@@ -43,5 +43,9 @@ class QuizsController < ApplicationController
 
   def quiz_params
 
+  end
+
+  def quiz
+    @quiz = 
   end
 end
