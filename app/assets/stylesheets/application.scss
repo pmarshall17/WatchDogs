@@ -1,15 +1,35 @@
 @import "materialize/components/color";
 $primary-color: color("black", "lighten-2") !default;
 @import 'materialize';
+@import 'compilations.scss';
+@import 'quizzes.scss';
+
+// Navigation
 
 nav{
   background:none;
   box-shadow:none;
 }
-.side-nav{
-  // right:0;
-  // left:auto;
-}
 nav .button-collapse{
   right:10px;
 }
+.side-nav{
+    background:rgba(0,0,0,.8);
+    color:white;
+}
+.side-nav li a {
+    color: #cacaca;
+    font-size: 16px;
+    line-height: 60px;
+}
+.side-nav li:hover {
+    border-left: 3px solid #d4d4d4;
+}
+// .side-nav li:first-child{
+//   right:25px;
+// }
+// .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
+//     border-left: 0px;
+//     color: #3b6cad;
+//     font-weight:700;
+// }
