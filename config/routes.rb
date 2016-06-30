@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
+  root 'compilations#index'
 
+  resources :compilations do
+    resources :favorites
+  end
 
-root 'compilations#index'
-
-resources :compilations do
-  resources :favorites
-end
-
-resources :quizzes
+  resources :quizzes
+    
+  devise_for :users
 
   get 'dogs/index'
 
@@ -27,4 +27,5 @@ resources :quizzes
   get 'statics/breeds_traits'
 
   get 'statics/info_page'
+
 end
