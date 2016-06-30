@@ -1,14 +1,14 @@
-# if Rails.env.development?
-#   petfinder = "#{Rails.root}/config/petfinder.yml"
-#   if File.exists? petfinder
-#     config = YAML.load_file(petfinder)
-#     config.each { |key, value| ENV[key] || ENV[key] = value.to_s}
+# dog.rbif Rails.env.development?
+#   tumblr = "#{Rails.root}/config/tumblr.yml"
+#   if File.exists? tumblr
+#     config = YAML.load_file(tumblr)
+#     config.each { |key, value| ENV[key] = value }
 #   else
-#     raise "Developer person, you need to put in your keys to the petfinder.yml file. See petfinder.yml.example to see where to get your APIs."
+#     raise "cp config/tumblr.yml.example "
 #   end
 # end
 
 # Petfinder.configure do |config|
-#   config.api_key = ENV['CONSUMER_KEY']
-#   config.api_secret = ENV['CONSUMER_SECRET']
+#   config.api_key = '3cb99c576efa43d0164ed946c198bc20'
+#   config.api_secret = '6160988306a1338b6b72738e265bf519'
 # end
