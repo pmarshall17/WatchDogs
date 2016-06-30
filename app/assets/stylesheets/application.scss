@@ -1,1 +1,15 @@
-@import 'materialize'
+@import "materialize/components/color";
+$primary-color: color("black", "lighten-2") !default;
+@import 'materialize';
+
+nav{
+  background:none;
+  box-shadow:none;
+}
+.side-nav{
+  // right:0;
+  // left:auto;
+}
+nav .button-collapse{
+  right:10px;
+}
