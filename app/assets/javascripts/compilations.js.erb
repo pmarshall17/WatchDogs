@@ -1,0 +1,21 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+
+$(document).ready(function() {
+  // Initialize collapse button
+  $('.button-collapse').sideNav({
+      menuWidth: 325, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+
+  if (window.location.pathname == '/') {
+    $('body').css('background', <%= "\'#000000 url(\"#{image_url('watchdog-home.jpg')}\") no-repeat\'" %>),
+    $('body').css('background-size', '100%')
+
+  };
+
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+});
