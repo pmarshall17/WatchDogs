@@ -2,6 +2,7 @@
 $primary-color: color("black", "lighten-2") !default;
 @import 'materialize';
 @import 'compilations.scss';
+@import 'dogs.scss';
 @import 'quizzes.scss';
 @import 'statics.scss';
 
@@ -13,6 +14,9 @@ nav{
 }
 nav .button-collapse{
   right:10px;
+}
+nav .mdi-navigation-menu{
+  color:rgb(0,0,0);
 }
 .side-nav{
     background:rgba(0,0,0,.8);
@@ -34,5 +38,3 @@ nav .button-collapse{
 //     color: #3b6cad;
 //     font-weight:700;
 // }
-
-
