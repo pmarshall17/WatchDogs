@@ -3,6 +3,7 @@ class QuizzesController < ApplicationController
 
   def index
     @quizzes = Quiz.all
+    render :question1
   end
 
   def show
@@ -40,6 +41,40 @@ class QuizzesController < ApplicationController
     #   format.json { head :no_content }
     # end
   end
+
+  # CUSTOM QUESTIONS ROUTES 
+
+  def question_1
+    render :question1
+  end
+
+  def question_2
+    # @quiz = current_user.quiz 
+    # @quiz[:question_1] = params[:answer_1]
+    render :question2
+  end
+  
+  def question_3
+    render :question3
+  end
+  
+  def question_4
+    render :question4
+  end
+
+  def question_5
+    render :question5
+  end
+
+  def question_6
+    render :question6
+  end
+
+  def question_7
+    render :question7
+  end
+
+
 
   private
 
