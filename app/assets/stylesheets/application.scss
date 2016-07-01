@@ -11,30 +11,49 @@ $primary-color: color("black", "lighten-2") !default;
 nav{
   background:none;
   box-shadow:none;
+  width: 5%;
+  right: 1%;
+  top: 2%;
+  position: fixed;
+  z-index: 999;
 }
+
 nav .button-collapse{
   right:10px;
 }
 nav .mdi-navigation-menu{
-  color:rgb(0,0,0);
+  color:rgb(0, 0, 0);
 }
 .side-nav{
-    background:rgba(0,0,0,.8);
-    color:white;
-}
-.side-nav li a {
-    color: #cacaca;
-    font-size: 16px;
-    line-height: 60px;
+  background:rgba(0,0,0,.8);
+  color:white;
 }
 .side-nav li:hover {
-    border-left: 3px solid #d4d4d4;
+  border-left: 3px solid #d4d4d4;
 }
+.side-nav li:hover a {
+  padding: 0 27px;
+}
+.side-nav li a {
+  color: #cacaca;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+// Container
+.container {
+  margin-top: 2%;
+}
+
 // .side-nav li:first-child{
 //   right:25px;
 // }
-// .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
-//     border-left: 0px;
-//     color: #3b6cad;
-//     font-weight:700;
-// }
+.side-nav li:hover:first-child, .side-nav li:hover:first-child a {
+  border-left: 0px;
+  color: #3b6cad;
+  font-weight:700;
+}
+.side-nav li:hover:first-child a{
+  padding: 0 30px;
+  font-weight:700;
+}
