@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :favorites
   end
 
-  resources :quizzes
+  
     
   devise_for :users
 
@@ -27,5 +27,15 @@ Rails.application.routes.draw do
   get 'statics/breeds_traits'
 
   get 'statics/info_page'
+
+  # GET QUIZZES
+
+  get 'quizzes/1', to: 'quizzes#question_1'
+  get 'quizzes/2', to: 'quizzes#question_2'
+  get 'quizzes/3', to: 'quizzes#question_3'
+  get 'quizzes/4', to: 'quizzes#question_4'
+  get 'quizzes/5', to: 'quizzes#question_5'
+  get 'quizzes/6', to: 'quizzes#question_6'
+  get 'quizzes/7', to: 'quizzes#question_7'
 
 end
