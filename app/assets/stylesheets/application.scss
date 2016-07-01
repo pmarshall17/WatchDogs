@@ -3,6 +3,7 @@ $primary-color: color("black", "lighten-2") !default;
 @import 'materialize';
 @import 'compilations.scss';
 @import 'quizzes.scss';
+@import 'statics.scss';
 
 // Navigation
 
@@ -33,3 +34,5 @@ nav .button-collapse{
 //     color: #3b6cad;
 //     font-weight:700;
 // }
+
+
