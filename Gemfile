@@ -29,6 +29,8 @@ gem 'devise'
 
 gem 'httparty'
 
+gem 'geocoder'
+
 
 
 group :development, :test do
