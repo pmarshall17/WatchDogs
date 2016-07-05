@@ -44,6 +44,20 @@ nav .mdi-navigation-menu{
 .container {
   margin-top: 2%;
 }
+// About Us
+img.tm-member {
+    width: 72%;
+    border-radius: 50%;
+    border: #494545 solid 6px;
+}
+.team-content a {
+    color: #256f93;
+    font-size: 12px;
+}
+.team-content a:hover {
+    color: #494545;
+}
+
 
 // .side-nav li:first-child{
 //   right:25px;
