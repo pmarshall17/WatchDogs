@@ -27,6 +27,8 @@ gem 'petfinder'
 
 gem 'devise'
 
+gem 'httparty'
+
 
 
 group :development, :test do

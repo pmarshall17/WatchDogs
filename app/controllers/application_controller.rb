@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+ 	private
 
-  private
-    def client
-      @client ||= Petfinder::Client.new(client: :httpclient)
-    end
+ 	def client
+ 		@client ||= Petfinder::Client.new(client: :httpclient)
+ 	end
+
 end
