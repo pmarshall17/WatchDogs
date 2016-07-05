@@ -1,1 +1,14 @@
-<%= @result %>
+<%  @result.each do |dog| %>
+
+	<img src=<%= dog.photos.first.medium %>/>
+	<p>Name: <%= dog.name %></p>
+	<p>Age: <%= dog.age %></p>
+	<p>Sex: <%= dog.sex %></p>
+	<p>Breeds: <%= dog.breeds.join(" / ") %> </p>
+	<p>City: <%= dog.city.first %> </p>
+	<p>Description: <%= dog.description_sanitized %></p>
+	<hr />
+
+<%end%>
+
+
