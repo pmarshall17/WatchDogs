@@ -1,10 +1,10 @@
 # dog.rbif Rails.env.development?
-#   tumblr = "#{Rails.root}/config/tumblr.yml"
-#   if File.exists? tumblr
-#     config = YAML.load_file(tumblr)
+#   watchdogs = "#{Rails.root}/config/watchdogs.yml"
+#   if File.exists? watchdogs
+#     config = YAML.load_file(watchdogs)
 #     config.each { |key, value| ENV[key] = value }
 #   else
-#     raise "cp config/tumblr.yml.example "
+#     raise "cp config/watchdogs.yml.example "
 #   end
 # end
 
