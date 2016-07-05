@@ -1,8 +1,19 @@
-<h3>Question 3</h3>
-<div>
-<body>
-  <div class="animsition-overlay" data-animsition-overlay="true">
-    <%= link_to 'Next', quizzes_4_path %>
+<h3 class="center">Where will you spend the most time with your dog?</h3>
+<div class="row">
+    <div class="center col s4 offset-s4 m6">
+      <label for="icon_prefix"><i class="fa fa-building-o fa-5x" aria-hidden="true"></i>&nbsp </label>
+      <br />
+      <input name="group1" type="radio" id="apartment" />
+      <label for="apartment">Apartment</label>     
+    </div>
+
+    <div class="center col s8 offset-s4 m6">
+      <label for="icon_prefix"><i class="fa fa-home fa-5x" aria-hidden="true"></i>&nbsp </label>
+      <br />
+      <input name="group1" type="radio" id="house" />
+      <label for="house">House</label>
+    </div>
   </div>
-</body>
+<div class="center">
+    <%= link_to 'Next', quizzes_4_path %>
 </div>
