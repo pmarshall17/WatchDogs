@@ -1,18 +1,81 @@
-<div class="animsition">
-  <h1 class="center">Dog Compatibility Quiz</h1>
-    <div class="container quiz-question">
-  <h3 class="center quiz-">What's your zipcode?</h3>
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s4 offset-s4 center">
-          <input id="icon_prefix" type="text" class="validate" />
-          <label for="icon_prefix"><i class="fa fa-compass fa-2x" aria-hidden="true"></i>&nbsp Zipcode</label>
-        </div>
+  <div class="first-slide center">
+   
+    <div><h3>What's your zipcode?</h3>
+      <div class="center col s4 offset-s4 m4 space-selection">
+      <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+      <input class="slick-form center" placeholder="zipcode">
       </div>
-    </form>
+    </div>
+
+
+    <div><h3>Where are you living?</h3>
+      <div class="center col s4 offset-s4 m4 space-selection">
+        <i class="fa fa-building-o fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-home fa-5x" aria-hidden="true"></i>
+        <br />
+        <input class='slick-form' name="living" type="radio" id="apartment" />
+        <label for="apartment">Apartment</label>     
+        <input class='slick-form' name="living" type="radio" id="house" />
+        <label for="house">House</label>
+      </div>
+    </div>
+
+    <div><h3>Where will you spend the most time with your dog?</h3>
+      <div class="center col s4 offset-s4 m4 space-selection">
+        <i class="fa fa-tree fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+        <br />
+        <input class='slick-form' name="energy" type="radio" id="outside" />
+        <label for="outside">Outside</label>     
+        <input class='slick-form' name="energy" type="radio" id="inside" />
+        <label for="inside">Inside</label>
+      </div>
+    </div>
+        
+    <div><h3>Do you prefer a male or female dog?</h3>
+      <div class="center col s4 offset-s4 m4 space-selection">
+        <i class="fa fa-male fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-female fa-5x" aria-hidden="true"></i>
+        <br />
+        <input class='slick-form' name="sex" type="radio" id="male"/>
+        <label for="male">Male</label>     
+        <input class='slick-form' name="sex" type="radio" id="female" />
+        <label for="female">Female</label>
+      </div>
+    </div>
+
+    <div><h3>Age?</h3>
+      <div class="center col s4 offset-s4 m4 space-selection">
+        <i class="fa fa-paw fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-paw fa-3x" aria-hidden="true"></i>
+        <i class="fa fa-paw fa-4x" aria-hidden="true"></i>
+        <i class="fa fa-paw fa-5x" aria-hidden="true"></i>
+        <br />
+        
+        <input class='slick-form' name="age" type="radio" id="puppy" />
+        <label for="puppy">Puppy</label>
+        <input class='slick-form' name="age" type="radio" id="young" />
+        <label for="young">Young</label>  
+        <input class='slick-form' name="age" type="radio" id="adult" />
+        <label for="adult">Adult</label>       
+        <input class='slick-form' name="age" type="radio" id="senior" />
+        <label for="senior">Senior</label>
+      </div>
+    </div>
+
   </div>
 
-  <%= link_to 'Next', quizzes_2_path, class: 'animsition-link' %>
-</div>
+
+  <script type="text/javascript">$(document).ready(function(){
+    $('.first-slide').slick({
+      arrows: true,
+      dots: true
+      });
+    $('.slick-form').change(function() {
+      setTimeout(function() {
+        $('.first-slide').slick('slickNext');
+      }, 300);
+    });
+  });
+</script>
 

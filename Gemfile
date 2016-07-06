@@ -27,6 +27,8 @@ gem 'petfinder'
 
 gem 'devise'
 
+# gem 'jquery-slick-rails'
+
 
 
 group :development, :test do

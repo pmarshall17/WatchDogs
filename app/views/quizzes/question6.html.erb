@@ -1,8 +1,21 @@
-<h3>Question 6</h3>
-<div>
-<body>
-  <div class="animsition-overlay" data-animsition-overlay="true">
+<h3 class="center">Size?</h3>
+<div class="row">
+  <div class="center m6">
+    <label for="icon_prefix"><i class="fa fa-signal fa-5x" aria-hidden="true"></i>&nbsp </label>
+    <br />
+    <input name="group1" type="radio" id="small" />
+    <label for="small">Small</label>
+
+    <input name="group1" type="radio" id="medium" />
+    <label for="medium">Medium</label>
+
+    <input name="group1" type="radio" id="large" />
+    <label for="large">Large</label>
+  </div>
+</div>
+
+  <div class="animsition-overlay center" data-animsition-overlay="true">
+    <%= link_to 'Back', quizzes_5_path, class: 'animsition-link' %>
     <%= link_to 'Next', quizzes_7_path %>
   </div>
-</body>
 </div>

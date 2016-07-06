@@ -1,3 +1,43 @@
-.apartment {
-  float: left;
+body {
+  background-image: url("forest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+
+}
+
+html {
+  color: white;
+}
+
+
+.space-selection i {
+  margin: 0 50px;
+  height: 100px
+}
+
+.space-selection label {
+  margin: 0 50px;
+}
+
+.first-slide {
+  background-color: rgba(211, 211, 211, 0.3);
+  height: 600px;
+  padding: 10px;
+  margin: 0; 
+}
+
+.first-slide input {
+  width: 30%;
+  
+}
+
+h3 {
+  margin: 0 50px;
+  padding: 10%;
+}
+
+.slick-form {
+  color: white;
 }

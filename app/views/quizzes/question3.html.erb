@@ -1,19 +1,21 @@
 <h3 class="center">Where will you spend the most time with your dog?</h3>
 <div class="row">
     <div class="center col s4 offset-s4 m6">
-      <label for="icon_prefix"><i class="fa fa-building-o fa-5x" aria-hidden="true"></i>&nbsp </label>
+      <label for="icon_prefix"><i class="fa fa-tree fa-5x" aria-hidden="true"></i></i>&nbsp </label>
       <br />
-      <input name="group1" type="radio" id="apartment" />
-      <label for="apartment">Apartment</label>     
+      <input name="group1" type="radio" id="outside" />
+      <label for="outside">Outside</label>     
     </div>
 
     <div class="center col s8 offset-s4 m6">
-      <label for="icon_prefix"><i class="fa fa-home fa-5x" aria-hidden="true"></i>&nbsp </label>
+      <label for="icon_prefix"><i class="fa fa-gamepad fa-5x" aria-hidden="true"></i></i>&nbsp </label>
       <br />
-      <input name="group1" type="radio" id="house" />
-      <label for="house">House</label>
+      <input name="group1" type="radio" id="inside" />
+      <label for="inside">Inside</label>
     </div>
   </div>
+  
 <div class="center">
-    <%= link_to 'Next', quizzes_4_path %>
+  <%= link_to 'Back', quizzes_2_path, class: 'animsition-link' %>
+  <%= link_to 'Next', quizzes_4_path %>
 </div>
