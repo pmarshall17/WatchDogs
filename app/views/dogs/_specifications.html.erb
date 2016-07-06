@@ -1,48 +1,49 @@
-<h3>Location:</h3>
-<input type="text" placeholder="Enter Zip Code OR City, State">
-<br />
+<h1>Search dogs in local shelters</h1>
 
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="Enter Zip Code, City, OR State" id="zip_code" type="text" class="validate">
+        <label for="zip_code">Location:</label>
+      </div>
+      <div class="input-field col s6">
+        <input placeholder="Enter desired breed" id="breed" type="text" class="validate">
+        <label for="breed">Breed:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m4">
+        <select>
+          <option value="" disabled selected>No Preference</option>
+          <option value="">Male</option>
+          <option value="">Female</option>
+        </select>
+        <label>Gender</label>
+      </div>
+      <div class="input-field col s12 m4">
+        <select>
+          <option value="" disabled selected>No Preference</option>
+          <option value="1">Sporting</option>
+          <option value="2">Family</option>
+          <option value="3">Hound/Hunting</option>
+          <option value="4">Protector</option>
+          <option value="4">Toy</option>
+          <option value="4">Herding</option>
+        </select>
+        <label>Type</label>
+      </div>
 
-<h3>Sex:</h3>
-<input id="cheese" type="checkbox" value="Cheese" />
-<label for="cheese">Male</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Female</label>
-<br />
-
-<h3>Groups:</h3>
-<input id="cheese" type="checkbox" value="Cheese" />
-<label for="cheese">Sporting</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Family</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Hound/Hunting</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Protector</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Toy</label>
-<br />
-<input id="olives" type="checkbox" value="Olives" />
-<label for="olives">Herding</label>
-<br />
-
-<h4>Age:</h4>
-<h6>(In Years)</h6>
-<input id="cheese" type="checkbox"  value="Cheese" />
-<label for="cheese">0-2</label>
-<br />
-<input id="olives" type="checkbox"  value="Olives" />
-<label for="olives">2-4</label>
-<br />
-<input id="olives" type="checkbox"  value="Olives" />
-<label for="olives">4-6</label>
-<br />
-<input id="olives" type="checkbox"  value="Olives" />
-<label for="olives">6-9</label>
-<br />
-<br />
+      <div class="input-field col s12 m4">
+        <select>
+          <option value="" disabled selected>Age:</option>
+          <option value="1">Baby (0-6 months )</option>
+          <option value="2">Young (.5-3 Years)</option>
+          <option value="3">Adult (3-8 Years)</option>
+          <option value="4">Senior (8+ years)</option>
+        </select>
+        <label>Age</label>
+      </div>
+    </div>
+  </form>
+</div>
