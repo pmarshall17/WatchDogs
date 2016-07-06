@@ -1,8 +1,22 @@
-<h3>Question 5</h3>
-<div>
-<body>
-  <div class="animsition-overlay" data-animsition-overlay="true">
-    <%= link_to 'Next', quizzes_6_path %>
+<h3 class="center">Age?</h3>
+<div class="row">
+  <div class="center col s4 offset-s4 m6">
+    <label for="icon_prefix"><i class="fa fa-paw fa-3x" aria-hidden="true"></i>&nbsp </label>
+    <br />
+    <input name="group1" type="radio" id="puppy" />
+    <label for="puppy">Puppy</label>     
   </div>
-</body>
+
+  <div class="center col s8 offset-s4 m6">
+    <label for="icon_prefix"><i class="fa fa-paw fa-5x" aria-hidden="true"></i>&nbsp </label>
+    <br />
+    <input name="group1" type="radio" id="adult" />
+    <label for="adult">Adult</label>
+  </div>
 </div>
+
+<div class="animsition-overlay center" data-animsition-overlay="true">
+  <%= link_to 'Back', quizzes_4_path, class: 'animsition-link' %>
+  <%= link_to 'Next', quizzes_6_path %>
+</div>
+
