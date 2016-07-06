@@ -39,6 +39,17 @@ nav .mdi-navigation-menu{
   font-size: 16px;
   line-height: 60px;
 }
+// Content
+
+// Changing default font
+// html {
+//    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+//  }
+
+// h1, h2, h3, h4, h5, h6{
+//   text-decoration:underline;
+// }
+
 
 // Container
 .container {
@@ -58,6 +69,23 @@ img.tm-member {
     color: #494545;
 }
 
+// Information page
+
+.info-nav li {
+    border-left: #444444 3px solid;
+    margin: 4px 0;
+    padding: 0 6px;
+}
+.info-nav li:hover{
+    border-left: #256f93 3px solid;
+}
+.info-nav a {
+    font-size:19px;
+    color:#5b5b5b;
+}
+.info-nav a:hover {
+    color:#256f93;
+}
 
 // .side-nav li:first-child{
 //   right:25px;
