@@ -13,30 +13,32 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~>4.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'materialize-sass'
+gem 'materialize-sass', '~>0.97.6'
 
-gem 'webpack-rails-react'
+gem 'webpack-rails-react', '~>1.0.7'
 
-gem 'petfinder'
+gem 'petfinder', '~>1.0.3'
 
-gem 'devise'
+gem 'devise', '~>4.1.1'
 
-gem 'httparty'
+gem 'httparty', '~>0.13.7'
 
-gem 'geocoder'
+gem 'geocoder', '~>1.3.7'
+
+gem 'will_paginate', '~>3.1.0'
 
 
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry'
+  gem 'pry', '~>0.10.3'
 end
 
 group :development do
