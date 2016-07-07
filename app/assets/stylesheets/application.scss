@@ -6,6 +6,12 @@ $primary-color: color("black", "lighten-2") !default;
 @import 'quizzes.scss';
 @import 'statics.scss';
 
+// Overwrite default font
+html {
+  font-family: Cabin, Trebuchet, sans-serif;
+}
+
+
 // Navigation
 
 nav{
@@ -39,6 +45,12 @@ nav .mdi-navigation-menu{
   font-size: 16px;
   line-height: 60px;
 }
+
+// Cards
+.card .card-title {
+    font-size: 19px;
+}
+
 // Content
 
 // Changing default font
@@ -59,6 +71,13 @@ width:100%;
 }
 .dog-name{
   font-size:20px;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 12, /Users/ShawsRP/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/materialize-sass-0.97.6/app/assets/stylesheets/materialize/components/_grid.scss */
+  .container {
+    width: 85%;
+  }
 }
 
 // Container
