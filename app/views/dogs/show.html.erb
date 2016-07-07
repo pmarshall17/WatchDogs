@@ -1,15 +1,16 @@
-
-<div class="row">
+<div class="container">
+	<div class="row">
 		<%  @result.each do |dog| %>
-	<div class="dog-box col offset-s1 s11 pull-s1 m6 l4">
-		<img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
-		<p class="dog-name"><%= dog.name %></p>
-		<p><b>Age:</b> <%= dog.age %></p>
-		<p><b>Sex:</b> <%= dog.sex %></p>
-		<p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-		<p><b>City:</b> <%= dog.city.first %> </p>
-		<p><b>Description:</b> <%= dog.description_sanitized %></p>
-		<hr><br />
-	</div>
+		<div class="dog-box col offset-s1 s11 pull-s1 m6 l4">
+			<img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
+			<p class="dog-name"><%= dog.name %></p>
+			<p><b>Age:</b> <%= dog.age %></p>
+			<p><b>Sex:</b> <%= dog.sex %></p>
+			<p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
+			<p><b>City:</b> <%= dog.city.first %> </p>
+			<p><b>Description:</b> <%= dog.description_sanitized %></p>
+			<hr><br />
+		</div>
 		<%end%>
+	</div>
 </div>
