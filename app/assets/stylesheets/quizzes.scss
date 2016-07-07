@@ -6,6 +6,7 @@
   height: 100vh !important;
   color: white;
   margin-top: -15px !important;
+
 }
 
 
@@ -20,10 +21,13 @@
 }
 
 .first-slide {
-  background-color: rgba(211, 211, 211, 0.3);
-  height: 600px;
-  padding: 10px;
-  margin: 0; 
+  background-color: rgba(211, 211, 211, 0.2);
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+
 }
 
 .first-slide input {
@@ -31,7 +35,7 @@
   
 }
 
-h3 {
+.first-slide h3 {
   margin: 0 50px;
   padding: 10%;
 }
