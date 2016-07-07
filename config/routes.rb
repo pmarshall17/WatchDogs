@@ -45,5 +45,6 @@ Rails.application.routes.draw do
   get 'quizzes/5', to: 'quizzes#question_5'
   get 'quizzes/6', to: 'quizzes#question_6'
   get 'quizzes/7', to: 'quizzes#question_7'
+  get 'quizzes/results', to: 'quizzes#results'
 
 end
