@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
-
-  get 'users/index'
-
-  get 'users/edit'
-
-  get 'users/update'
-
   root 'compilations#index'
 
   resources :compilations do
@@ -17,6 +9,14 @@ Rails.application.routes.draw do
   
     
   devise_for :users
+
+  get 'users/show'
+
+  get 'users/index'
+
+  get 'users/edit'
+
+  get 'users/update'
 
   get 'dogs/index'
 

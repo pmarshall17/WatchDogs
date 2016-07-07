@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	result = request.location
+  	# result = request.location
   end
 
   def edit
