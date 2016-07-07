@@ -1,15 +1,13 @@
-body {
+.quiz {
   background-image: url("forest.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
-
-}
-
-html {
+  height: 100vh !important;
   color: white;
+  margin-top: -15px !important;
 }
+
 
 
 .space-selection i {

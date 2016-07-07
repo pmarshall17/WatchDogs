@@ -1,4 +1,4 @@
 CONSUMER_KEY: 'petfinder oauth key'
 CONSUMER_SECRET: 'petfinder oauth secret'
 
-# Go to http://www.petfinder.com/developers/api-key to create your API codes
+Go to http://www.petfinder.com/developers/api-key to create your API codes

@@ -3,10 +3,21 @@ $primary-color: color("black", "lighten-2") !default;
 @import 'materialize';
 @import 'compilations.scss';
 @import 'dogs.scss';
-@import 'quizzes.scss';
 @import 'statics.scss';
 @import 'slick.scss';
 @import 'slick-theme.scss';
+@import 'quizzes.scss';
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.page-wrap {
+
+}
 
 // Navigation
 
@@ -15,7 +26,7 @@ nav{
   box-shadow:none;
   width: 5%;
   right: 1%;
-  top: 2%;
+  top: 0;
   position: fixed;
   z-index: 999;
 }

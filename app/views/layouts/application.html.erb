@@ -12,11 +12,10 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 <body id="page-bg">
-  <%= render(partial: 'layouts/nav') %>
-  <div class="container">
+  <div class='page-wrap'>
+    <%= render(partial: 'layouts/nav') %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     <%= yield %>
   </div>
 </body>
