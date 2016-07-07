@@ -10,6 +10,14 @@ Rails.application.routes.draw do
     
   devise_for :users
 
+  get 'users/show'
+
+  get 'users/index'
+
+  get 'users/edit'
+
+  get 'users/update'
+
   get 'dogs/index'
 
   get 'dogs/home'
