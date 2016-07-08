@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   resources :compilations do
     resources :favorites
   end
-
-  
     
   devise_for :users
 
