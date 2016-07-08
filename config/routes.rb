@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :compilations do
     resources :favorites
   end
-    
+  
   devise_for :users
 
   get 'users/show'
@@ -17,21 +17,13 @@ Rails.application.routes.draw do
   get 'users/update'
 
   get 'dogs/index'
-
   get 'dogs/home'
-
   get 'dogs/show'
-
   get 'dogs/edit'
-
   get 'dogs/new'
-
   get 'statics/meet_the_team'
-
   get 'statics/get_involved'
-
   get 'statics/breeds_traits'
-
   get 'statics/info_page'
 
   # GET QUIZZES
@@ -43,5 +35,6 @@ Rails.application.routes.draw do
   get 'quizzes/5', to: 'quizzes#question_5'
   get 'quizzes/6', to: 'quizzes#question_6'
   get 'quizzes/7', to: 'quizzes#question_7'
+  get 'quizzes/results', to: 'quizzes#results'
 
 end
