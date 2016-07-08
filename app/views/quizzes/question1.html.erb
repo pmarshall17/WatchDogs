@@ -1,28 +1,28 @@
   <div class='quiz'>
-  <div class="first-slide center">
-   
-    <div><h3>What's your zipcode?</h3>
+    <form id='quiz-form' action= "/quizzes/form" method="POST">
+    
+    <div class="first-slide center">
       <div class="center col s4 offset-s4 m4 space-selection">
-      <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-      <input class="slick-form center" placeholder="zipcode">
+        <h3>What's your zipcode?</h3>
+        <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+        <input class="slick-form center" type="text" 
+               name="zip_code" placeholder="zipcode"
+               autofocus='true' required='true'/>
       </div>
-    </div>
 
-
-    <div><h3>Where are you living?</h3>
       <div class="center col s4 offset-s4 m4 space-selection">
+        <h3>Where are you living?</h3>
         <i class="fa fa-building-o fa-5x" aria-hidden="true"></i>
         <i class="fa fa-home fa-5x" aria-hidden="true"></i>
         <br />
-        <input class='slick-form' name="living" type="radio" id="apartment" />
+        <input class='slick-form' name="apartment" type="radio" id="apartment" />
         <label for="apartment">Apartment</label>     
-        <input class='slick-form' name="living" type="radio" id="house" />
+        <input class='slick-form' name="house" type="radio" id="house" />
         <label for="house">House</label>
       </div>
-    </div>
 
-    <div><h3>Where will you spend the most time with your dog?</h3>
       <div class="center col s4 offset-s4 m4 space-selection">
+        <h3>Where will you spend the most time with your dog?</h3>
         <i class="fa fa-tree fa-5x" aria-hidden="true"></i>
         <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
         <br />
@@ -31,10 +31,9 @@
         <input class='slick-form' name="energy" type="radio" id="inside" />
         <label for="inside">Inside</label>
       </div>
-    </div>
         
-    <div><h3>Do you prefer a male or female dog?</h3>
       <div class="center col s4 offset-s4 m4 space-selection">
+        <h3>Do you prefer a male or female dog?</h3>
         <i class="fa fa-male fa-5x" aria-hidden="true"></i>
         <i class="fa fa-female fa-5x" aria-hidden="true"></i>
         <br />
@@ -43,10 +42,9 @@
         <input class='slick-form' name="sex" type="radio" id="female" />
         <label for="female">Female</label>
       </div>
-    </div>
 
-    <div><h3>Age?</h3>
       <div class="center col s4 offset-s4 m4 space-selection">
+        <h3>Age?</h3>
         <i class="fa fa-paw fa-2x" aria-hidden="true"></i>
         <i class="fa fa-paw fa-3x" aria-hidden="true"></i>
         <i class="fa fa-paw fa-4x" aria-hidden="true"></i>
@@ -62,10 +60,16 @@
         <input class='slick-form' name="age" type="radio" id="senior" />
         <label for="senior">Senior</label>
       </div>
+
+      <div class="center col s4 offset-s4 m4 space-selection">
+        <h3>Submit Results</h3>
+        <button class="btn waves-effect waves-light" type="submit">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      </div>
     </div>
-
-  </div>
-
+  </form>
 </div>
   <script type="text/javascript">$(document).ready(function(){
     $('.first-slide').slick({
