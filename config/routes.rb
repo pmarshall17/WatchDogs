@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   
   devise_for :users
 
+  get 'search' => "locations#search"
+
   get 'users/show'
 
   get 'users/index'
