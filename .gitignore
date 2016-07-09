@@ -12,3 +12,4 @@
 !/log/.keep
 /tmp
 /config/petfinder.yml
+/config/omniauth.yml

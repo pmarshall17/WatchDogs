@@ -33,6 +33,8 @@ gem 'geocoder', '~>1.3.7'
 
 gem 'will_paginate', '~>3.1.0'
 
+gem 'omniauth-facebook', '~>3.0.0'
+
 
 
 

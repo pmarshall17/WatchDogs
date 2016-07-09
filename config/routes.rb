@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
-
+  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
   root 'compilations#index'
 
   resources :compilations do
     resources :favorites
   end
 
-
-
-  devise_for :users
-
   get 'users/show'
-
-  get 'users/index'
-
+  
   get 'users/edit'
-
   get 'users/update'
 
   get 'dogs/index'
