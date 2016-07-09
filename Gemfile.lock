@@ -42,6 +42,13 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     coderay (1.1.1)
+    coffee-rails (4.1.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.1.x)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     devise (4.1.1)
@@ -57,8 +64,13 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
+    geokit (1.10.0)
+    geokit-rails (2.1.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -177,7 +189,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-rails
   devise (~> 4.1.1)
+  geokit-rails
+  gmaps4rails
   httparty (~> 0.13.7)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.1.1)

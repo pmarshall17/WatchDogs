@@ -1,1 +1,46 @@
+<div style='width: 800px;'>
+  <div id="map" style='width: 1500px; height: 600px;'></div>
+</div>
+
+
 <%=render(partial: 'form')%>
+
+<hr/>
+<div class="conatiner">
+	<% if @yelp_results %>
+		<div class="container">
+			<div class="row">
+				<% @yelp_results.businesses.each do |yelp| %>
+				<div class="col s12 m12 l12 ">
+					<p><b>Name:</b><%= yelp.name %></p>
+					<p><b>Rating:</b><%= yelp.rating %></p>
+					<p><<%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
+					<p><%= yelp.location.display_address.first %></p>
+					<p><%= yelp.location.display_address.last %></p>
+					<p><%= yelp.location.neighborhoods %></p>
+					<p><%= yelp.id %></p>
+					<p><%= yelp.phone %></p>
+					<p><%= yelp.mobile_url %></p>
+				</div>
+				<% end %>	
+			</div>
+		</div>
+</div>
+<% end %>
+<script>
+	<% if @hash %>
+		var marker_info = <%=raw @hash.to_json %>
+	<% else %>
+	  var marker_info
+		navigator.geolocation.getCurrentPosition(function(position) {
+			marker_info = ([{lat:position.coords.latitude,lng:position.coords.longitude}]);
+		});
+	<% end %>
+	console.log(marker_info)
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+	  markers = handler.addMarkers(marker_info);
+	  handler.bounds.extendWith(markers);
+	  handler.fitMapToBounds();
+	});
+</script>

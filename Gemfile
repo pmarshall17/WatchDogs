@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'coffee-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~>4.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -33,6 +35,9 @@ gem 'will_paginate', '~>3.1.0'
 
 gem 'yelp', require: 'yelp' 
 
+gem 'geokit-rails'
+
+gem 'gmaps4rails'
 
 
 
