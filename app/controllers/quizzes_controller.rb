@@ -6,14 +6,14 @@ class QuizzesController < ApplicationController
   end
 
   def form
-    binding.pry
+    # binding.pry
   end
   
 
   # CUSTOM QUESTIONS ROUTES 
 
   def question_1
-    render :question1
+    
   end
 
   
