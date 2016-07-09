@@ -14,3 +14,4 @@
 /config/petfinder.yml
 /config/yelp.yml
 /config/omniauth.yml
+/config/google.yml
