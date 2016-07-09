@@ -29,6 +29,9 @@ gem 'devise', '~>4.1.1'
 
 gem 'httparty', '~>0.13.7'
 
+gem 'geocoder', '~>1.3.7'
+
+gem 'will_paginate-materialize'
 gem 'will_paginate', '~>3.1.0'
 
 gem 'yelp', require: 'yelp' 

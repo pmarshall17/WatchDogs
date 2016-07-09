@@ -49,4 +49,8 @@ Rails.application.routes.draw do
   get 'quizzes/7', to: 'quizzes#question_7'
   get 'quizzes/results', to: 'quizzes#results'
 
+  # POST QUIZZES
+
+  post 'quizzes/form', to:'quizzes#form'  
+
 end
