@@ -1,0 +1,4 @@
+OMNIAUTH_ID_FB: 'facebook app id'
+OMNIAUTH_SECRET_FB: 'facebook app secret'
+
+# Get Facebook ID and SECRET from developers.facebook.com and creating a new app.

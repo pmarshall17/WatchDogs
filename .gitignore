@@ -13,3 +13,4 @@
 /tmp
 /config/petfinder.yml
 /config/yelp.yml
+/config/omniauth.yml

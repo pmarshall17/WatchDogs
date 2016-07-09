@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
+  root 'compilations#index'
+
+  resources :compilations do
+    resources :favorites
+  end
+
   get 'locations/index'
 
   get 'locations/show'
@@ -10,22 +18,11 @@ Rails.application.routes.draw do
 
   get 'locations/delete'
 
-  root 'compilations#index'
-
-  resources :compilations do
-    resources :favorites
-  end
-  
-  devise_for :users
-
   get 'search' => "locations#search"
 
   get 'users/show'
 
-  get 'users/index'
-
   get 'users/edit'
-
   get 'users/update'
 
   get 'dogs/index'
@@ -51,6 +48,6 @@ Rails.application.routes.draw do
 
   # POST QUIZZES
 
-  post 'quizzes/form', to:'quizzes#form'  
+  post 'quizzes/form', to:'quizzes#form'
 
 end
