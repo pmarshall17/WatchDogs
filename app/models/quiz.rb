@@ -7,7 +7,7 @@ class Quiz < ActiveRecord::Base
 
   # PARSE PARAMS INTO USEABLE VARIABLES
   def self.set_options(params)
-    options = {size: '', options: ''}
+    options = {size: '', sex: '', age: ''}
     if params[:apartment] == 'on'
       options[:size] = 'small'
     elsif params[:house] == 'on'
@@ -15,15 +15,25 @@ class Quiz < ActiveRecord::Base
     end
 
     # if params[:outside] == 'on'
-    #   options[:options] += ', engery: "high"'
+    #   options[:options] += ', energy: "high"'
     # elsif params[:inside] == 'on'
-    #   options[:options] += ', engery: "low"'
+    #   options[:options] += ', energy: "low"'
     # end
 
-    if params[:male] =='on'
-      options[:options] << ', sex: "M"'
+    if params[:male] == 'on'
+      options[:sex] = 'male'
     elsif params[:female] == 'on'
-      options[:options] << ', sex: "F"'
+      options[:sex] = 'female'
+    end
+
+    if params[:puppy] == 'on'
+      options[:age] = 'baby'
+    elsif params[:young] == 'on'
+      options[:age] = 'young'
+    elsif params[:adult] = 'on'
+      options[:age] = 'adult'
+    elsif params[:senior] == 'on'
+      options[:age] = 'senior'
     end
    return options
   end
