@@ -75,6 +75,17 @@ nav .mdi-navigation-menu{
 //   text-decoration:underline;
 // }
 
+
+// Devise
+p.notice {
+    background: rgba(153, 202, 154, 0.8);
+    border-radius: 3px;
+    // padding: 3px 15px;
+    color: rgb(92, 132, 95);
+    // border: 1px solid rgb(92,132,95);
+}
+
+
 // Dogs
 .dog-box {
   padding: 0 18px !important;
@@ -103,7 +114,7 @@ width:100%;
 
 * {
   margin: 0;
-  padding: 0  
+  padding: 0
 }
 #modal1 {
   background: url(http://img6.uploadhouse.com/fileuploads/17737/17737075bdad5cfa9423bb2c3c2beee695c72bb8.jpg);
@@ -225,11 +236,3 @@ img.tm-member {
   padding: 0 30px;
   font-weight:700;
 }
-
-
-
-
-
-
-
-
