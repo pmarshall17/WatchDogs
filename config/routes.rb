@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'dogs/index'
   get 'dogs/home'
-  get 'dogs/show'
+  post 'dogs/show'
   get 'dogs/edit'
   get 'dogs/new'
   get 'statics/meet_the_team'

@@ -2,7 +2,9 @@
 	<div class="row">
 		<%  @result.each do |dog| %>
 		<div class="dog-box col offset-s1 s11 pull-s1 m6 l4">
-			<img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
+			<%if dog.photos.first%>
+				<img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
+			<% end %>	
 			<p class="dog-name"><%= dog.name %></p>
 			<p><b>Age:</b> <%= dog.age %></p>
 			<p><b>Sex:</b> <%= dog.sex %></p>
