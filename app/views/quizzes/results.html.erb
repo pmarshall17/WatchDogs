@@ -1,91 +1,37 @@
-<div class="row">
-  <% if @spaniel %>
-  <% @spaniel.each do |dog| %>
-  <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-    <p><b>Age:</b> <%= dog.age %></p>
-    <p><b>Sex:</b> <%= dog.sex %></p>
-    <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-    <p><b>City:</b> <%= dog.city.first %> </p>
-    <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
 
-<% if @lab %>
-<% @lab.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
-
-
-<% if @golden %>
-<% @golden.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
-
-<% if @beagle %>
-<% @beagle.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
-
-<% if @bloodhounds %>
-<% @bloodhounds.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
-
-<% if @maltese %>
-<% @maltese.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
-</div>
-
-<% if @shih_tzu %>
-<% @shih_tzu.each do |dog| %>
- <img class="dog-bio-pic" src=<%= dog.photos.first %>/>
-    <p class="dog-name"><%= dog.name %></p>
-  <p><b>Age:</b> <%= dog.age %></p>
-  <p><b>Sex:</b> <%= dog.sex %></p>
-  <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-  <p><b>City:</b> <%= dog.city.first %> </p>
-  <p><b>Description:</b> <%= dog.description_sanitized %></p>
-<% end %>
-<% end %>
 
 <!-- render a message(maybe just show breeds that match) if there are no dogs -->
 
-
-
+<div class="container">
+  <div class="row">
+        <% @dogs.keys.each do |breed| %>
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+        <% @dogs[breed].each do |dog| %>
+        <% description = dog.description %>
+        <% res = dog.description.split("\n") %>
+        <% if res.first =~ /function/ %>
+          <% res.shift %>
+          <% description = res.join("\n").gsub("// ", "") %>
+        <% end %>
+          <img src=<%= dog.photos.first.medium %>/>
+          <span class="card-title"><%= dog.name %></span>
+          <p><b>Age:</b> <%= dog.age %></p>
+          <p><b>Sex:</b> <%= dog.sex %></p>
+          <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
+          <p><b>City:</b> <%= dog.city.first %> </p>
+          <p><b>Description:</b> <%= description %></p>
+          <% end %> 
+        <% end %>
+        </div>
+        <div class="card-content">
+          <p></p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
