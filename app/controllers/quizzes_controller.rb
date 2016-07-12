@@ -2,7 +2,7 @@ class QuizzesController < ApplicationController
 
   def results
     @options = Quiz.set_options(params) 
-    if @options[:size] == 'small'
+    if @options[:size] == 'small' #&& 'medium'
       if @options[:sex] == 'male'
         @spaniel = Quiz.search("#{params[:zip]}", {count: 5, breed: 'english springer spaniel', sex: 'M'})
         @maltese = Quiz.search("#{params[:zip]}", {count: 5, breed: 'maltese', sex: 'M'})
@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
       end
     end
 
-    if @options[:size] == 'large'
+    if @options[:size] == 'large' #&& 'Extra-large'
       if @options[:sex] == 'male'
         if @options[:age] == 'baby'
           @beagle = Quiz.search("#{params[:zip]}", {count: 5, breed: 'beagle', sex: 'M', age: 'baby'})
