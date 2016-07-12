@@ -1,49 +1,51 @@
-<h1>Search dogs in local shelters</h1>
+<div class="container">
+  <h1>Search dogs in local shelters</h1>
 
-<div class="row">
-  <form class="col s12" method="POST" action="/dogs/show">
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-    <div class="row">
-      <div class="input-field col s6">
-        <input placeholder="Enter Zip Code, City, OR State" id="location" type="text" class="validate" required=true name="location">
-        <label for="location">Location:</label>
+  <div class="row">
+    <form class="col s12" method="POST" action="/dogs/show">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Enter Zip Code, City, OR State" id="location" type="text" class="validate" required=true name="location">
+          <label for="location">Location:</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Enter desired breed" id="breed" type="text" class="validate" name="breed">
+          <label for="breed">Breed:</label>
+        </div>
       </div>
-      <div class="input-field col s6">
-        <input placeholder="Enter desired breed" id="breed" type="text" class="validate" name="breed">
-        <label for="breed">Breed:</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12 m4">
-        <select name="sex">
-          <option value="" disabled selected>No Preference</option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-        </select>
-        <label>Sex</label>
-      </div>
-      <div class="input-field col s12 m4">
-        <select name="size">
-          <option value="" disabled selected>No Preference</option>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option value="L">Large</option>
-          <option value="XL">Extra-Large</option>
-        </select>
-        <label>Size</label>
-      </div>
+      <div class="row">
+        <div class="input-field col s12 m4">
+          <select name="sex">
+            <option value="" disabled selected>No Preference</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+          <label>Sex</label>
+        </div>
+        <div class="input-field col s12 m4">
+          <select name="size">
+            <option value="" disabled selected>No Preference</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra-Large</option>
+          </select>
+          <label>Size</label>
+        </div>
 
-      <div class="input-field col s12 m4">
-        <select name="age">
-          <option value="" disabled selected>Age:</option>
-          <option value="Baby">Baby (0-6 months )</option>
-          <option value="Young">Young (.5-3 Years)</option>
-          <option value="Adult">Adult (3-8 Years)</option>
-          <option value="Senior">Senior (8+ years)</option>
-        </select>
-        <label>Age</label>
+        <div class="input-field col s12 m4">
+          <select name="age">
+            <option value="" disabled selected>Age:</option>
+            <option value="Baby">Baby (0-6 months )</option>
+            <option value="Young">Young (.5-3 Years)</option>
+            <option value="Adult">Adult (3-8 Years)</option>
+            <option value="Senior">Senior (8+ years)</option>
+          </select>
+          <label>Age</label>
+        </div>
       </div>
-    </div>
-    <button type="submit" class="btn" >Generate Search</button>
-  </form>
+      <button type="submit" class="btn" >Generate Search</button>
+    </form>
+  </div>
 </div>
