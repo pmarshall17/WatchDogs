@@ -13,6 +13,7 @@
           <% res.shift %>
           <% description = res.join("\n").gsub("// ", "") %>
         <% end %>
+          <h3>Based on your quiz results; we recommend:</h3>
           <img src=<%= dog.photos.first.medium %>/>
           <span class="card-title"><%= dog.name %></span>
           <p><b>Age:</b> <%= dog.age %></p>
@@ -22,12 +23,6 @@
           <p><b>Description:</b> <%= description %></p>
           <% end %> 
         <% end %>
-        </div>
-        <div class="card-content">
-          <p></p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
         </div>
       </div>
     </div>

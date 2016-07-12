@@ -11,7 +11,19 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery_ujs 
 //= require materialize-sprockets
 //= require underscore
 //= require_tree
+
+$(document).ready( function() { 
+
+	$('.flip').click(function(){
+			console.log('clicked')
+	    $(this).find('.card').addClass('flipped').mouseleave(function(){
+	        $(this).removeClass('flipped');
+	    });
+	    return false;
+	});
+
+});
