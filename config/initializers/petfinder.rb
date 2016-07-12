@@ -1,7 +1,7 @@
 if Rails.env.development?
-  watchdogs = "#{Rails.root}/config/petfinder.yml"
-  if File.exists? watchdogs
-    config = YAML.load_file(watchdogs)
+  petfinder = "#{Rails.root}/config/petfinder.yml"
+  if File.exists? petfinder
+    config = YAML.load_file(petfinder)
     config.each { |key, value| ENV[key] = value }
   else
     raise "cp config/petfinder.yml.example"

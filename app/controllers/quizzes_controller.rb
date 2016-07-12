@@ -1,49 +1,39 @@
 class QuizzesController < ApplicationController
 
   def results
-    @options = Quiz.set_options(params) 
-    if @options[:size] == 'small' #&& 'medium'
-      if @options[:sex] == 'male'
-        @spaniel = Quiz.search("#{params[:zip]}", {count: 5, breed: 'english springer spaniel', sex: 'M'})
-        @maltese = Quiz.search("#{params[:zip]}", {count: 5, breed: 'maltese', sex: 'M'})
-        @shih_tzu = Quiz.search("#{params[:zip]}", {count: 5, breed: 'shih tzu', sex: 'M'})
-      elsif @options[:sex] == 'female'
-        @spaniel = Quiz.search("#{params[:zip]}", {count: 5, breed: 'english springer spaniel', sex: 'F'})
-        @maltese = Quiz.search("#{params[:zip]}", {count: 5, breed: 'maltese', sex: 'F'})
-        @shih_tzu = Quiz.search("#{params[:zip]}", {count: 5, breed: 'shih tzu', sex: 'F'})
-      end
+    @options = Quiz.set_options(params)
+    @options[:count] = 1
+    @dogs = {}
+
+    
+    # file = File.read(Rails.root.join('lib/breeds.json'))
+    # breeds = JSON.parse(file)['data']
+    # binding.pry
+
+    # breeds.select {|b| b['energy'] == @options['energy']}
+    # breeds.select {|b| b['apartment'] == @options['s']}
+
+
+    # results = Quiz.search("#{params[:zip]}", @options)
+    # @spaniel == results.select {|dog| dog.breeds.include?('spaniel') }
+
+    if @options[:size] == 'S'
+      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'english springer spaniel'}))
+      @dogs[:maltese] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'maltese'}))
+      @dogs[:shih_tzu] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'shih tzu'}))
     end
 
-    if @options[:size] == 'large' #&& 'Extra-large'
-      if @options[:sex] == 'male'
-        if @options[:age] == 'baby'
-          @beagle = Quiz.search("#{params[:zip]}", {count: 5, breed: 'beagle', sex: 'M', age: 'baby'})
-          @spaniel = Quiz.search("#{params[:zip]}", {count: 5, breed: 'english springer spaniel', sex: 'M', age: 'baby'})
-          @maltese = Quiz.search("#{params[:zip]}", {count: 5, breed: 'maltese', sex: 'M', age: 'baby'})
-          @shih_tzu = Quiz.search("#{params[:zip]}", {count: 5, breed: 'shih tzu', sex: 'M', age: 'baby'})
-          @lab = Quiz.search("#{params[:zip]}", {count: 5, breed: 'labrador retriever', sex: 'M', age: 'baby'})
-          @golden = Quiz.search("#{params[:zip]}", {count: 5, breed: 'golden retriever', sex: 'M', age: 'baby'})
-          @bloodhounds = Quiz.search("#{params[:zip]}", {count: 5, breed: 'bloodhound', sex: 'M', age: 'baby'})
-        elsif @options[:sex] == 'female'
-          if @options[:age] == 'baby'
-            @beagle = Quiz.search("#{params[:zip]}", {count: 5, breed: 'beagle', sex: 'F', age: 'baby'})
-            @spaniel = Quiz.search("#{params[:zip]}", {count: 5, breed: 'english springer spaniel', sex: 'F', age: 'baby'})
-            @maltese = Quiz.search("#{params[:zip]}", {count: 5, breed: 'maltese', sex: 'F',  age: 'baby'})
-            @shih_tzu = Quiz.search("#{params[:zip]}", {count: 5, breed: 'shih tzu', sex: 'F',  age: 'baby'})
-            @lab = Quiz.search("#{params[:zip]}", {count: 5, breed: 'labrador retriever', sex: 'F', age: 'baby'})
-            @golden = Quiz.search("#{params[:zip]}", {count: 5, breed: 'golden retriever', sex: 'F',  age: 'baby'})
-            @bloodhounds = Quiz.search("#{params[:zip]}", {count: 5, breed: 'bloodhound', sex: 'F',  age: 'baby'})
-          end
-        end
-      end
+    if @options[:size] == 'L'
+      @dogs[:beagle] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'beagle'}))
+      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'english springer spaniel'}))
+      @dogs[:maltese] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'maltese'}))
+      @dogs[:shih_tzu] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'shih tzu'}))
+      @dogs[:lab] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'labrador retriever'}))
+      @dogs[:golden] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'golden retriever'}))
+      @dogs[:bloodhound] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'bloodhound'}))
     end
   end
-    
-
-
-
-
-
+  
   def form
     @params = params
     redirect_to results_path(params: @params)

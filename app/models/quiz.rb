@@ -2,28 +2,28 @@ class Quiz < ActiveRecord::Base
 
   def self.search(zip, options = {})
     petfinder = Petfinder::Client.new
-      petfinder.find_pets("dog", zip, options)
+    petfinder.find_pets("dog", zip, options)
   end
 
   # PARSE PARAMS INTO USEABLE VARIABLES
   def self.set_options(params)
-    options = {size: '', sex: '', age: ''}
+    options = {size: '', sex: '', age: '', count: 50 }
     if params[:apartment] == 'on'
-      options[:size] = 'small'
+      options[:size] = 'S'
     elsif params[:house] == 'on'
-      options[:size] = 'large'
+      options[:size] = 'L'
     end
 
-    # if params[:outside] == 'on'
-    #   options[:options] += ', energy: "high"'
-    # elsif params[:inside] == 'on'
-    #   options[:options] += ', energy: "low"'
-    # end
+    if params[:outside] == 'on'
+      params[:energy] = 'high'
+    elsif params[:inside] == 'on'
+      params[:energy] = 'low'
+    end
 
     if params[:male] == 'on'
-      options[:sex] = 'male'
+      options[:sex] = 'M'
     elsif params[:female] == 'on'
-      options[:sex] = 'female'
+      options[:sex] = 'F'
     end
 
     if params[:puppy] == 'on'

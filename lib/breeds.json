@@ -1,0 +1,46 @@
+{
+	"data": [
+		{
+			"name": "labrador retriever",
+			"energy": "high",
+			"size": "L",
+			"fur": "l"
+		}, 
+		{
+			"name": "english springer spaniel",
+			"energy": "low",
+			"size": "S",
+			"fur": "l"
+		},
+		{
+			"name": "maltese",
+			"energy": "low",
+			"size": "S",
+			"fur": "s"
+		},
+		{
+			"name": "beagle",
+			"energy": "high",
+			"size": "S",
+			"fur": "s"
+		},
+		{
+			"name": "golden retriever",
+			"energy": "high",
+			"size": "L",
+			"fur": "l"
+		},
+		{
+			"name": "bloodhound",
+			"energy": "low",
+			"size": "L",
+			"fur": "s"
+		},
+		{
+			"name": "shih tzu",
+			"energy": "low",
+			"size": "S",
+			"fur": "l"
+		}
+	]
+}
