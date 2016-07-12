@@ -4,11 +4,10 @@
 $(document).ready(function() {
   // Initialize collapse button
   $('.button-collapse').sideNav({
-      menuWidth: 325, // Default is 240
-      edge: 'right', // Choose the horizontal origin
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
+    menuWidth: 325, // Default is 240
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  });
 
   if (window.location.pathname == '/') {
     $('body').css('background', <%= "\'#000000 url(\"#{image_url('watchdog-home.jpg')}\") no-repeat\'" %>),
@@ -16,6 +15,15 @@ $(document).ready(function() {
     $('.mdi-navigation-menu').css('color', 'white')
 
   };
+
+
+  // Smooth scroll
+
+  $('.scrollspy').scrollSpy({
+    offset: 1000
+  });
+
+
 
   $('select').material_select();
 
