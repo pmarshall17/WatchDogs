@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
+         
 
   # geocoded_by :ip_address, :latitude => :lat, :longitude => :lon
   has_many :favorites

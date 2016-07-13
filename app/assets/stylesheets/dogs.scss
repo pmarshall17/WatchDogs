@@ -20,20 +20,24 @@
 .search-dogs {
 	color: white;
 	margin: auto;
-  // width: 50%;
-  padding: 100px;
+  padding: 11% 0;
 }
 
 .btn-dogs {
 	border-radius: 25px;
 	color: grey;
 	background-color: white;
-
 }
-
+.btn:hover, .btn-large:hover {
+    background-color: #256f93;
+    color: rgb(255,255,255);
+}
+.select-wrapper span.caret {
+    color: rgba(255,255,255, .9);
+}
 .search-header {
+  text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
 	padding: 25px;
-	height: -100px;
 }
 
 
@@ -55,6 +59,8 @@ img{
 
 .flip-container {
 	perspective: 1000px;
+	height: 100px;
+//******  search dogs stylings
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
