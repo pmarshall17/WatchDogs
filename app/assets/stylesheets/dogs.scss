@@ -43,8 +43,14 @@
 
 
 img{
-	width: 320px;
+	width: 400px;
   height: auto;
+}
+
+.card-title {
+	font-size: 35px;
+	color: black;
+	text-align: center;
 }
 
 .flip-container {
@@ -89,4 +95,5 @@ img{
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	text-align: center;
 }
