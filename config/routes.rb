@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  # devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
+  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
 
   root 'compilations#index'
 
@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :locations
-  
-  devise_for :users
 
   get 'search' => "locations#search"
 
