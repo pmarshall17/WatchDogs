@@ -1,5 +1,6 @@
 @import "materialize/components/color";
 $primary-color: color("black", "lighten-2") !default;
+ $secondary-color: #256f93 !default;
 @import 'materialize';
 @import 'compilations.scss';
 @import 'dogs.scss';
