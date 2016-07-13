@@ -1,17 +1,19 @@
-<div class="container">
-  <h1>Search dogs in local shelters</h1>
+<div class="container center search-dogs">
+  <h2 class="search-header">Find a dog at your local shelter</h2>
 
   <div class="row">
     <form class="col s12" method="POST" action="/dogs/show">
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <div class="row">
-        <div class="input-field col s6">
+
+        <div class="input-field col s4">
           <input placeholder="Enter Zip Code, City, OR State" id="location" type="text" class="validate" required=true name="location">
-          <label for="location">Location:</label>
+          <label for="location">Enter your Location:</label>
         </div>
-        <div class="input-field col s6">
+
+        <div class="input-field col s4">
           <input placeholder="Enter desired breed" id="breed" type="text" class="validate" name="breed">
-          <label for="breed">Breed:</label>
+          <label for="breed">Dog Breed:</label>
         </div>
       </div>
       <div class="row">
@@ -21,8 +23,9 @@
             <option value="M">Male</option>
             <option value="F">Female</option>
           </select>
-          <label>Sex</label>
+          <label>Dog Gender:</label>
         </div>
+
         <div class="input-field col s12 m4">
           <select name="size">
             <option value="" disabled selected>No Preference</option>
@@ -31,7 +34,7 @@
             <option value="L">Large</option>
             <option value="XL">Extra-Large</option>
           </select>
-          <label>Size</label>
+          <label>Dog Size:</label>
         </div>
 
         <div class="input-field col s12 m4">
@@ -42,10 +45,13 @@
             <option value="Adult">Adult (3-8 Years)</option>
             <option value="Senior">Senior (8+ years)</option>
           </select>
-          <label>Age</label>
+          <label>Dog Age:</label>
         </div>
       </div>
-      <button type="submit" class="btn" >Generate Search</button>
+      <button type="submit" class="btn-dogs waves-effect wave-light btn-large" >Submit</button>
     </form>
   </div>
 </div>
+
+
+

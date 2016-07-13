@@ -2,34 +2,29 @@
 
 <div class="container">
   <div class="row">
-        <% @dogs.keys.each do |breed| %>
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-        <% @dogs[breed].each do |dog| %>
-        <% description = dog.description %>
-        <% res = dog.description.split("\n") %>
-        <% if res.first =~ /function/ %>
-          <% res.shift %>
-          <% description = res.join("\n").gsub("// ", "") %>
-        <% end %>
-          <img src=<%= dog.photos.first.medium %>/>
-          <span class="card-title"><%= dog.name %></span>
-          <p><b>Age:</b> <%= dog.age %></p>
-          <p><b>Sex:</b> <%= dog.sex %></p>
-          <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-          <p><b>City:</b> <%= dog.city.first %> </p>
-          <p><b>Description:</b> <%= description %></p>
-          <% end %> 
-        <% end %>
-        </div>
-        <div class="card-content">
-          <p></p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
+    <% @dogs.keys.each do |breed| %>
+    <% @dogs[breed].each do |dog| %>
+    <div class="card dog-box col offset-s1 s11 pull-s1 m6 l4">
+      <% if dog.photos.first%>
+        <img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
+      <% end %>
+      <% description = dog.description %>
+      <% res = dog.description.split("\n") %>
+      <% if res.first =~ /function/ %>
+        <% res.shift %>
+        <% description = res.join("\n").gsub("// ", "") %>
+      <% end %>
+      <div class="card-reveal"
+        <span class="card-title activator"><%= dog.name %></span>
       </div>
+      <p><b>Age:</b> <%= dog.age %></p>
+      <p><b>Sex:</b> <%= dog.sex %></p>
+      <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
+      <p><b>City:</b> <%= dog.city.first %> </p>
+      <p><b>Description:</b> <%= description %></p>
+      <hr><br />
     </div>
+    <% end %> 
+    <% end %>
   </div>
 </div>
