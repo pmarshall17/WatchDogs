@@ -14,7 +14,8 @@
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 </head>
-<body id="page-bg">
+<% klazz = params[:controller] == 'dogs' && params[:action] == 'index' ? 'generate-search' : '' %>
+<body class=<%= klazz %>>
   <div class='page-wrap'>
     <%= render(partial: 'layouts/nav') %>
     <p class="notice"><%= notice %></p>
