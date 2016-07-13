@@ -4,26 +4,27 @@ Rails.application.routes.draw do
 
   root 'compilations#index'
 
-  resources :compilations do
-    resources :favorites
-  end
+  resources :compilations
 
   resources :locations
   
   devise_for :users
 
+  resources :favorites
+
+
   get 'search' => "locations#search"
 
   get 'users/show'
-
   get 'users/edit'
   get 'users/update'
-
+  
   get 'dogs/index'
   get 'dogs/home'
   post 'dogs/show'
   get 'dogs/edit'
   get 'dogs/new'
+
   get 'statics/meet_the_team'
   get 'statics/get_involved'
   get 'statics/breeds_traits'

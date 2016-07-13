@@ -17,13 +17,4 @@
 //= require_tree
 
 $(document).ready( function() { 
-
-	$('.flip').click(function(){
-			console.log('clicked')
-	    $(this).find('.card').addClass('flipped').mouseleave(function(){
-	        $(this).removeClass('flipped');
-	    });
-	    return false;
-	});
-
 });
