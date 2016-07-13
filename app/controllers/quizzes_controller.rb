@@ -8,7 +8,6 @@ class QuizzesController < ApplicationController
     
     # file = File.read(Rails.root.join('lib/breeds.json'))
     # breeds = JSON.parse(file)['data']
-    # binding.pry
 
     # breeds.select {|b| b['energy'] == @options['energy']}
     # breeds.select {|b| b['apartment'] == @options['s']}
@@ -47,11 +46,6 @@ class QuizzesController < ApplicationController
 
   
   private
-
-
-  # def show
-  #   @result = Dog.search("84102",{breed: "Labrador Retriever", age: "Young"})
-  # end
   
 end
 
