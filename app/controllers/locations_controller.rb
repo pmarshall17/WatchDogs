@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 
   def index
     if params[:term]
-      par = { term: params[:term], limit: 12 }
+      par = { term: params[:term], limit: 20 }
       @yelp_results = Yelp.client.search(params[:location], par)
       @locations = @yelp_results.businesses.map { |business| business.location.coordinate  }
       @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
