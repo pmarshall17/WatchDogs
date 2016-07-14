@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 </head>
-<% klazz = params[:controller] == 'dogs' && params[:action] == 'index' ? 'generate-search' : '' %>
+<% klazz = params[:controller] == 'dogs' || params[:controller] == 'devise' && params[:action] == 'index' || params[:action] == 'new' ? 'generate-search' : '' %>
 <body class=<%= klazz %>>
   <div class='page-wrap'>
     <%= render(partial: 'layouts/nav') %>
