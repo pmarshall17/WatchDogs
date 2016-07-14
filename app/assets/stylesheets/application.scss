@@ -1,6 +1,6 @@
 @import "materialize/components/color";
 $primary-color: color("black", "lighten-2") !default;
- $secondary-color: #256f93 !default;
+$secondary-color: #256f93 !default;
 @import 'materialize';
 @import 'compilations.scss';
 @import 'dogs.scss';
@@ -8,6 +8,7 @@ $primary-color: color("black", "lighten-2") !default;
 @import 'slick.scss';
 @import 'slick-theme.scss';
 @import 'quizzes.scss';
+@import 'devise/*';
 
 body {
   height: 100%;
