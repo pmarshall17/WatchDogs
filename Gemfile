@@ -45,6 +45,10 @@ gem 'geokit-rails'
 
 gem 'gmaps4rails', '~>2.1.2'
 
+gem 'mechanize'
+
+gem 'openurl'
+
 
 
 group :development, :test do
