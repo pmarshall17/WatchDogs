@@ -1,13 +1,15 @@
 <div class="container">
-	<div class="form-group">
-	  <%= form_tag locations_path, :method => 'get' do %>
-	  <div class="form-group">
-	    <%= text_field_tag :term, params[:term], required: true, placeholder: 'Places', class: "form-control" %>
-	    <%= text_field_tag :location, params[:location], required: true, placeholder: 'City, Zip, or State', class: "form-control" %>
-	    <%= submit_tag "Search", :name => nil, class: "btn btn-default"%>
-	    <br />
-	    <br /> 
-	    <class="yelp">powered by <%= image_tag "https://s3-media2.fl.yelpcdn.com/assets/srv0/developer_pages/55e2efe681ed/assets/img/yelp_logo_50x25.png" %>
+	<div class="row">
+		<div class="form-group col s12 m6">
+			<%= form_tag locations_path, :method => 'get' do %>
+			<div class="form-group col s12 m6">
+				<%= text_field_tag :term, params[:term], required: true, placeholder: 'Places', class: "form-control" %>
+				<%= text_field_tag :location, params[:location], required: true, placeholder: 'City, Zip, or State', class: "form-control" %>
+				<%= submit_tag "Search", :name => nil, class: "btn btn-default"%>
+				<br />
+				<br />
+				<class="yelp col s12 m6">powered by <%= image_tag "https://s3-media2.fl.yelpcdn.com/assets/srv0/developer_pages/55e2efe681ed/assets/img/yelp_logo_50x25.png" %>
+			</div>
+		</div>
 	</div>
-</div>
 	<% end %>
