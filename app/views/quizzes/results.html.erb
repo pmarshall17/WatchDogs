@@ -1,52 +1,36 @@
 <!-- render a message(maybe just show breeds that match) if there are no dogs -->
 
-<div class="container">
-  <div class="row">
-        <% @dogs.keys.each do |breed| %>
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-        <% @dogs[breed].each do |dog| %>
-        <% description = dog.description %>
-        <% res = dog.description.split("\n") %>
-        <% if res.first =~ /function/ %>
-          <% res.shift %>
-          <% description = res.join("\n").gsub("// ", "") %>
-        <% end %>
-          <h3>Based on your quiz results; we recommend:</h3>
-          <img src=<%= dog.photos.first.medium %>/>
-          <span class="card-title"><%= dog.name %></span>
-          <p><b>Age:</b> <%= dog.age %></p>
-          <p><b>Sex:</b> <%= dog.sex %></p>
-          <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-          <p><b>City:</b> <%= dog.city.first %> </p>
-          <p><b>Description:</b> <%= description %></p>
-          <% end %> 
-        <% end %>
+<h3>Based on your quiz results; we recommend:</h3>
+
+<% @dogs.keys.each do |breed| %>
+  <% @dogs[breed].each do |dog| %>
+    <div class='row'>
+      <div class="col s12 m6 offset-m3 l6 offset-l3">
+        <div class="card">
+          <div class='card-content'>
+            <p><b>Breed:</b> <%= dog.breeds.join(" / ") %> </p>
+            <% description = dog.description %>
+            <% res = dog.description.split("\n") %>
+            <% if res.first =~ /function/ %>
+              <% res.shift %>
+              <% description = res.join("\n").gsub("// ", "") %>
+            <% end %>
+            <div class="card-image">
+              <% if dog.photos.first %>
+                <img class="dog-bio-pic" src=<%= dog.photos.first.medium %> />
+              <% else %>
+                <h1>No photo</h1>
+              <% end %> 
+            </div>
+            <span class="card-title"><%= dog.name %></span>
+            <p><b>Age:</b> <%= dog.age %></p>
+            <p><b>Sex:</b> <%= dog.sex %></p>
+            <p><b>Breed:</b> <%= dog.breeds.join(" / ") %> </p>
+            <p><b>City:</b> <%= dog.city.first %> </p>
+            <p><b>Description:</b> <%= description %></p>
+          </div>
         </div>
-    <% @dogs.keys.each do |breed| %>
-    <% @dogs[breed].each do |dog| %>
-    <div class="card dog-box col offset-s1 s11 pull-s1 m6 l4">
-      <% if dog.photos.first%>
-        <img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
-      <% end %>
-      <% description = dog.description %>
-      <% res = dog.description.split("\n") %>
-      <% if res.first =~ /function/ %>
-        <% res.shift %>
-        <% description = res.join("\n").gsub("// ", "") %>
-      <% end %>
-      <div class="card-reveal"
-        <span class="card-title activator"><%= dog.name %></span>
       </div>
-      <p><b>Age:</b> <%= dog.age %></p>
-      <p><b>Sex:</b> <%= dog.sex %></p>
-      <p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-      <p><b>City:</b> <%= dog.city.first %> </p>
-      <p><b>Description:</b> <%= description %></p>
-      <hr><br />
     </div>
-    <% end %> 
     <% end %>
-  </div>
-</div>
+  <% end %> 

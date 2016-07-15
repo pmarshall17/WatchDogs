@@ -1,20 +1,27 @@
-<div class='quiz'>
-  
+<div class='row'>
+<div class='quiz col s12'>
+
   <form id='quiz-form' action='/quizzes/form' method='POST'>
     <div class='first-slide center'>
-      <div class='center col s4 offset-s4 m4 space-selection'>
+      <div class='center col s12 m6 space-selection'>
         <h3>Where are you living?</h3>'
-        <i class='fa fa-building-o fa-5x' aria-hidden='true'></i>
-        <i class='fa fa-home fa-5x' aria-hidden='true'></i>
-        <br />
-        <input class='slick-form' name='apartment' type='radio' id='apartment'/>
-        <label for='apartment'>Apartment</label>     
-        <input class='slick-form' name='house' type='radio' id='house'/>
-        <label for='house'>House</label>
+        <div class='row'>
+          <i class='fa fa-building-o fa-5x quiz-apt' aria-hidden='true'></i>
+          <i class='slick-form fa fa-home fa-5x quiz-house' aria-hidden='true'></i>
+          <br />
+        <div class='row'>
+        <div class='quiz-label'>
+          <input class='slick-form apt-check' name='apartment' type='radio' id='apartment'/>
+          <label for='apartment'>Apartment</label>     
+          <input class='slick-form house-check' name='house' type='radio' id='house'/>
+          <label for='house'>House</label>
+        </div>
+        </div>
+        </div>
       </div>
 
 
-      <div class='center col s4 offset-s4 m4 space-selection'>
+      <div class='center col s12 m6 space-selection'>
         <h3>Where will you spend the most time with your dog?</h3>
         <i class='fa fa-tree fa-5x' aria-hidden='true'></i>
         <i class='fa fa-gamepad fa-5x' aria-hidden='true'></i>
@@ -25,7 +32,7 @@
         <label for='inside'>Inside</label>
       </div>
         
-      <div class='center col s4 offset-s4 m4 space-selection'>
+      <div class='center col s12 m6 space-selection'>
         <h3>Do you prefer a male or female dog?</h3>
         <i class='fa fa-male fa-5x' aria-hidden='true'></i>
         <i class='fa fa-female fa-5x' aria-hidden='true'></i>
@@ -36,7 +43,7 @@
         <label for='female'>Female</label>
       </div>
 
-      <div class='center col s4 offset-s4 m4 space-selection'>
+      <div class='center col s12 m6 space-selection'>
         <h3>Age?</h3>
         <i class='fa fa-paw fa-2x' aria-hidden='true'></i>
         <i class='fa fa-paw fa-3x' aria-hidden='true'></i>
@@ -46,40 +53,31 @@
         <input class='slick-form' name='small' type='radio' id='small' />
         <label for='small'>Small</label>
         <input class='slick-form' name='medium' type='radio' id='medium' />
-        <label for='medium'>medium</label>
+        <label for='medium'>Medium</label>
         <input class='slick-form' name='large' type='radio' id='large' />
         <label for='large'>Large</label>  
       </div>
 
-      <div class='center col s4 offset-s4 m4 space-selection'>
+      <div class='center col s12 m6 space-selection'>
         <h3>What's your zipcode?</h3>
         <i class='fa fa-compass fa-3x' aria-hidden='true'></i>
         <input class='slick-form' name='inside' type='radio' id= 'inside' />
         <input class='slick-form center' type='number' 
                name='zip' placeholder='zipcode'
                id='zipcode' />
-      </div>
-      
-      <div class='center col s4 offset-s4 m4 space-selection'>
-        <h3>Submit Results</h3>
-        <button class='btn waves-effect waves-light' type='submit'>Submit
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <br />
+        <button class='btn waves-effect waves-light' id='quiz-submit' type='submit'>Submit
           <i class='material-icons right'>send</i>
         </button>
-        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+      </div>
+
+      <div class='center col s12 m6 space-selection'>
+        <h3 class="">Loading...</h3>
+        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+        <p class='slick-form'></p>
       </div>
     </div>
   </form>
 </div>
-
-<script type='text/javascript'>$(document).ready(function(){
-  $('.first-slide').slick({
-    arrows: true,
-    dots: true
-    });
-  $('.slick-form').change(function() {
-    setTimeout(function() {
-      $('.first-slide').slick('slickNext');
-    }, 300);
-  });
-});
-</script>
+</div>

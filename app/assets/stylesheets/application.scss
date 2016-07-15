@@ -9,6 +9,7 @@ $secondary-color: #256f93 !default;
 @import 'slick-theme.scss';
 @import 'quizzes.scss';
 @import 'devise/*';
+@import 'quiz-result';
 
 body {
   background: #28343b; /* Old browsers */
