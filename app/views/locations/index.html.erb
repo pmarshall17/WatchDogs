@@ -12,6 +12,7 @@
 
     <%=render(partial: 'form')%>
 
+  </div>
     <hr/>
 
     <% if @yelp_results %>
@@ -29,10 +30,8 @@
           <p><%= yelp.mobile_url %></p>
         </div>
         <% end %>
-      </div>
     </div>
-  </div>
-</div>
+
 <% end %>
 <script>
 <% if @hash %>
