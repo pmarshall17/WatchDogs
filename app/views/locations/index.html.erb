@@ -9,26 +9,24 @@
     <div id="map" class="col s12 m6" style='height: 600px;'></div>
 
 
-
     <%=render(partial: 'form')%>
 
     <hr/>
 
     <% if @yelp_results %>
-
         <% @yelp_results.businesses.each do |yelp| %>
         <div class="col s12 m4">
-          <p><b>Name:</b><%= yelp.name %></p>
-          <p><b>Rating:</b><%= yelp.rating %></p>
-          <p><<%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
-          <p><%= yelp.location.display_address.first %></p>
+          <p><b>Shelter: </b><%= yelp.name %></p>
+          <p><b>Rating: </b><%= yelp.rating %></p>
+          <p><b>Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
+          <p><b>Address: </b><%= yelp.location.display_address.first %></p>
           <p><%= yelp.location.display_address.last %></p>
-          <p><%= yelp.location.neighborhoods %></p>
-          <p><%= yelp.id %></p>
-          <p><%= yelp.phone %></p>
-          <p><%= yelp.mobile_url %></p>
+          <p><b>Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
+          <p><a target="_blank" href="<%= yelp.mobile_url %>">Click here for site link</a></p>
+          <hr/>
         </div>
         <% end %>
+        <hr/>
       </div>
     </div>
   </div>
@@ -36,18 +34,22 @@
 <% end %>
 <script>
 <% if @hash %>
-var marker_info = <%=raw @hash.to_json %>
+  var marker_info = <%=raw @hash.to_json %>
+  var timeout = 0;
 <% else %>
-var marker_info
-navigator.geolocation.getCurrentPosition(function(position) {
-  marker_info = ([{lat:position.coords.latitude,lng:position.coords.longitude}]);
-});
+  var marker_info
+  navigator.geolocation.getCurrentPosition(function(position) {
+    marker_info = {lat:position.coords.latitude,lng:position.coords.longitude};
+  });
+  var timeout = 0;
 <% end %>
-console.log(marker_info)
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  var markers = handler.addMarkers(marker_info);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
+setTimeout(function(){
+  console.log(marker_info)
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers(marker_info);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+}, timeout ) 
 </script>
