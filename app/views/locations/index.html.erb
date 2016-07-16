@@ -38,8 +38,9 @@
   var timeout = 0;
 <% end %>
 setTimeout(function(){
+  binding.pry
   console.log(marker_info)
-  handler = Gmaps.build('Google');
+  handler = Gmaps.build();
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     var markers = handler.addMarkers(marker_info);
     handler.bounds.extendWith(markers);
