@@ -77,6 +77,10 @@ nav .mdi-navigation-menu{
 h1.info-title {
   margin-top: 135px;
 }
+h1{
+  color:rgb(255,255,255);
+  text-shadow: 2px 1px 2px #969696;
+}
 .info-jump {
   display: block;
 }
@@ -294,10 +298,19 @@ input[type=text] {
   width: 15px;
 }
 
-img.tm-member {
-  width: 72%;
+// Meet the Team page
+.team-member {
+  background: rgba(255,255,255,.8);
+  padding: 19px;
+}
+img.tm-member-img {
+  // width: 72%;
   border-radius: 50%;
+  margin: auto 5%;
   border: #494545 solid 6px;
+}
+img.tm-member-img.col.s12 {
+  padding: 0px ;
 }
 .team-content a {
   color: #256f93;
@@ -306,7 +319,9 @@ img.tm-member {
 .team-content a:hover {
   color: #494545;
 }
-
+.team-member .row {
+  margin: 0 -0.75rem;
+}
 
 // .side-nav li:first-child{
 //   right:25px;
