@@ -48,7 +48,7 @@
 
 
 .flipper img {
-    max-height: 440px;
+    max-height: 230px;
     width: auto;
     margin: 0 auto;
     display: block;
@@ -76,7 +76,7 @@
 }
 
 .flip-container, .front, .back {
-  height: 530px;
+  height: 330px;
   margin: 15px auto;
 }
 
@@ -117,8 +117,14 @@
   background-color: rgba(0,0,0,.5);
   text-align: center;
   padding:8px;
+  overflow: hidden;
+  height:330px;
 }
 .back p {
     text-align: left;
     padding: 0 10px;
+}
+.back:hover {
+    overflow: visible;
+    overflow-y: scroll;
 }
