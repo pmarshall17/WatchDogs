@@ -58,22 +58,25 @@
         <label for='large'>Large</label>  
       </div>
 
-      <div class='center col s12 m6 space-selection'>
+      <div class='center col s12 m6 '>
         <h3>What's your zipcode?</h3>
-        <i class='fa fa-compass fa-3x' aria-hidden='true'></i>
-        <input class='slick-form' name='inside' type='radio' id= 'inside' />
-        <input class='slick-form center' type='number' 
+        <i class='fa fa-compass fa-3x space-selection' aria-hidden='true'></i>
+        <input class='slick-form' name='inside' type='radio' id='inside' />
+        <input class='slick-form' type='number' 
                name='zip' placeholder='zipcode'
                id='zipcode' />
         <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
         <br />
-        <button class='btn waves-effect waves-light' id='quiz-submit' type='submit'>Submit
-          <i class='material-icons right'>send</i>
-        </button>
+        
+        <div class="row">
+          <button class='btn waves-effect waves-light submit-btn' id='quiz-submit' type='submit'>Submit
+            <i class='material-icons right'>send</i>
+          </button>
+        </div>
       </div>
 
-      <div class='center col s12 m6 space-selection'>
-        <h3 class="">Loading...</h3>
+      <div class='center col s12 m6'>
+        <h3 class="">Loading Results...</h3>
         <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
         <p class='slick-form'></p>
       </div>
