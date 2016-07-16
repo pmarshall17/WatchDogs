@@ -1,17 +1,33 @@
 <div class="container">
 	<div class="row">
+		<h3>Search Results</h3>
+
 		<%  @result.each do |dog| %>
-		<div class="dog-box col offset-s1 s11 pull-s1 m6 l4">
-			<%if dog.photos.first%>
-				<img class="dog-bio-pic" src=<%= dog.photos.first.medium %>/>
-			<% end %>	
-			<p class="dog-name"><%= dog.name %></p>
-			<p><b>Age:</b> <%= dog.age %></p>
-			<p><b>Sex:</b> <%= dog.sex %></p>
-			<p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
-			<p><b>City:</b> <%= dog.city.first %> </p>
-			<p><b>Description:</b> <%= dog.description_sanitized %></p>
-			<hr><br />
+		<div class="dog-box col s12 m6 l4">
+			<div class="flip-container" ontouchstart="this.classList.toggle('toggle');">
+				<div class="flipper">
+					<div class='front col s12'>
+						<h5 class="dog-lowercase"><%= dog.name %></h5>
+						<%if dog.photos.first%>
+						<img class="dog-bio-pic activator responsive-img" src=<%= dog.photos.first.medium %>/>
+						<% else %>
+						<p class="no-photo">No photo</p>
+						<% end %>
+						<p> <%= dog.breeds.join(" / ") %> </p>
+
+					</div>
+					<div class="back col s12">
+						<h5 class="dog-lowercase"><%= dog.name %></h5>
+						<hr /><br />
+						<p><b>Age:</b> <%= dog.age %></p>
+						<p><b>Sex:</b> <%= dog.sex %></p>
+						<p><b>Breeds:</b> <%= dog.breeds.join(" / ") %> </p>
+						<p><b>City:</b> <%= dog.city.first %> </p>
+						<p><b>Description:</b> <%= dog.description_sanitized %></p>
+						<br /><hr /><br />
+					</div>
+				</div>
+			</div>
 		</div>
 		<%end%>
 	</div>
