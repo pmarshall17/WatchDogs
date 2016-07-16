@@ -3,14 +3,10 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 <div class="container">
-<%= yield :scripts %>
 
   <div class="row">
+    <div><%=render(partial: 'form')%></div>
     <div id="map" class="col s12 m6" style='height: 600px;'></div>
-
-
-    <%=render(partial: 'form')%>
-
   </div>
     <hr/>
 
@@ -27,11 +23,9 @@
           <hr/>
         </div>
         <% end %>
-<<<<<<< HEAD
         <hr/>
       </div>
-
-<% end %>
+    <% end %>
 <script>
 <% if @hash %>
   var marker_info = <%=raw @hash.to_json %>
