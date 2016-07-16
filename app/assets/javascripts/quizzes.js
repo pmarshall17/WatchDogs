@@ -9,37 +9,21 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-house').click(function(event) {  
-    console.log('house')
-    that = $('house-check')
-    that.prop('checked', !that.is(':checked'));
-    setTimeout(function() {
-      $('.first-slide').slick('slickNext');
-    }, 300);
+  // $('.quiz-house').click(function(event) {  
+  //   that = $('house-check')
+  //   that.prop('checked', !that.is(':checked'));
+  //   setTimeout(function() {
+  //     $('.first-slide').slick('slickNext');
+  //   }, 300);
+  // });
+
+  $('.tumblr-photos').slick({
+    arrows: true,
+    dots: true 
   });
-
-
-
-
-
-
-
-
-
-
-
-
+  $('.tumblr-slick').change(function() {
+    setTimeout(function() {
+      $('.tumblr-photos').slick('slickNext');
+    }, 300);
+  })
 })
-
-// $(function() { // <== Doc ready
-
-//   $('tr').click(function(event) {  
-
-//     if(event.target.type != "radio") {
-
-//       var that = $(this).find('input:radio');
-//       that.attr('checked', !that.is(':checked'));
-
-//     }
-//   });
-// });
