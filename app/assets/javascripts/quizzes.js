@@ -19,7 +19,7 @@ $(document).ready( function(){
 
   $('.tumblr-photos').slick({
     arrows: true,
-    dots: true 
+    dots: true
   });
   $('.tumblr-slick').change(function() {
     setTimeout(function() {
