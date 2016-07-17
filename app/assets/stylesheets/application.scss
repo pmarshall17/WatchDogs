@@ -319,8 +319,13 @@ input[type=text] {
 }
 
 // Meet the Team page
+
+.bio {
+  text-align: center;
+}
+
 .team-member {
-  background: rgba(255,255,255,.8);
+  background: #256f93;
   padding: 19px;
   margin: 10px 0;
 }
