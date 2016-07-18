@@ -10,7 +10,6 @@
     <li><%= link_to 'Breeds and Traits', statics_breeds_traits_path %></li>
     <li><%= link_to 'Local Outreach', locations_path %></li>
     <li><%= link_to 'Meet The Team', statics_meet_the_team_path %></li>
-    <li><%= link_to 'USO', outreach_index_path %></li>
     <% if user_signed_in? %>
         <li><%= link_to 'Logout', destroy_user_session_path, method: 'delete' %></li>
         <li><%= link_to 'Profile', favorites_path %> </li>

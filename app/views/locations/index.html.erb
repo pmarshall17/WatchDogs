@@ -7,13 +7,15 @@
  <%= yield :scripts %>
  
   <div class="row">
-    <div id="map" class="col s12 m6" style='height: 600px;'></div>
- 
-  
-      <%=render(partial: 'form')%>
-    </div> 
+    <div class="form-group"> <%=render(partial: 'form')%> </div>      
       <hr/>
-  
+  </div>
+  <div class="row">
+    <% if @yelp_results %>
+      <div id="map" class="col s12 m6" style='height: 600px;'></div>
+    <% end %> 
+  </div>
+
       <% if @yelp_results %>
          <% @yelp_results.businesses.each do |yelp| %>
          <div class="col s12 m4">
@@ -28,7 +30,7 @@
         </div>
           <% end %>
           <hr/>
-  </div>
+  
   <% end %>
   <script>
   <% if @hash %>
