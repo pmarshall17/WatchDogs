@@ -53,7 +53,11 @@ html {
 
 
 // Navigation
-
+.side-nav a.nav-logo {
+    font-family: "Poster";
+    text-align: center;
+    font-size: 75px;
+}
 nav{
   background:none;
   box-shadow:none;
@@ -67,37 +71,42 @@ nav{
 nav .button-collapse{
   right:10px;
 }
-nav .mdi-navigation-menu{
+body nav .mdi-navigation-menu{
   color:rgb(255,255,255);
+  font-size:3.6rem;
 }
 .side-nav{
   background:rgba(0,0,0,.8);
   color:white;
+  padding: 25px 0 0;
 }
 .side-nav li{
   list-style-type: none;
   margin:0;
 }
 .side-nav li:hover {
-  border-left: 3px solid #d4d4d4;
+  border-left: 3px solid #515a4b;
 }
 .side-nav li:hover a {
   padding: 0 27px;
 }
 .side-nav li a {
-  color: #cacaca;
-  font-size: 16px;
+  color: #e6e6e6;
+  font-size: 21px;
   line-height: 60px;
 }
-
+.dropdown-content li{
+  list-style-type: none;
+}
 ul li{
   list-style-type: disc;
   margin: 0 0 0 25px;
 }
+
 // Info Page
 
 // .vet-jobs {
-//   width: 
+//   width:
 // }
 
 .chart td {
@@ -112,8 +121,9 @@ h1.info-title {
 }
 h1, h3{
   color:rgb(255,255,255);
-  text-shadow: 2px 1px 2px #969696;
+  text-shadow: 2px 2px #3E4A49;
 }
+
 .info-jump {
   display: block;
 }
@@ -135,7 +145,7 @@ h1, h3{
   padding: 15px;
 }
 .info-box {
-  padding-bottom: 26%;
+  // padding-bottom: 26%;
   background-repeat:no-repeat !important;
   background-size: cover !important;
 }
@@ -177,7 +187,7 @@ h1, h3{
   color:rgb(255,255,255);
 }
 .info-nav li:hover a {
-  color:#256f93;
+  color:#3E4A49;
 }
 .info-box.dogs{
   padding: 11% 0 15% 0;
@@ -193,6 +203,7 @@ h1, h3{
 // Cards
 .card .card-title {
   font-size: 19px;
+  text-shadow: 2px 2px #3E4A49
 }
 
 // Content
@@ -421,7 +432,7 @@ img.tm-member-img.col.s12 {
 // }
 .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
   border-left: 0px;
-  color: #3b6cad;
+  color: #515a4b;
   font-weight:700;
 }
 .side-nav li:hover:first-child a{
