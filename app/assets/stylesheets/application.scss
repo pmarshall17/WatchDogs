@@ -52,7 +52,11 @@ html {
 
 
 // Navigation
-
+.side-nav a.nav-logo {
+    font-family: "Poster";
+    text-align: center;
+    font-size: 75px;
+}
 nav{
   background:none;
   box-shadow:none;
@@ -66,33 +70,38 @@ nav{
 nav .button-collapse{
   right:10px;
 }
-nav .mdi-navigation-menu{
+body nav .mdi-navigation-menu{
   color:rgb(255,255,255);
+  font-size:3.6rem;
 }
 .side-nav{
   background:rgba(0,0,0,.8);
   color:white;
+  padding: 25px 0 0;
 }
 .side-nav li{
   list-style-type: none;
   margin:0;
 }
 .side-nav li:hover {
-  border-left: 3px solid #d4d4d4;
+  border-left: 3px solid #515a4b;
 }
 .side-nav li:hover a {
   padding: 0 27px;
 }
 .side-nav li a {
   color: #cacaca;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 60px;
 }
-
+.dropdown-content li{
+  list-style-type: none;
+}
 ul li{
   list-style-type: disc;
   margin: 0 0 0 25px;
 }
+
 // Info Page
 
 // .vet-jobs {
@@ -413,7 +422,7 @@ img.tm-member-img.col.s12 {
 // }
 .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
   border-left: 0px;
-  color: #3b6cad;
+  color: #515a4b;
   font-weight:700;
 }
 .side-nav li:hover:first-child a{
