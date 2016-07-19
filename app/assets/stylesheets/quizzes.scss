@@ -12,6 +12,11 @@
   height: 100vh;
   background-position: center;
   margin-top: 15%;
+  border-radius: 15px;
+}
+
+.quiz-pic img {
+  border-radius: 15px;
 }
 
 
@@ -34,6 +39,10 @@
   color: #333D3C;
 }
 
+.quiz h1 {
+  text-shadow: 2px 2px #3E4A49;
+}
+
 .dog_bio_pic{
   width: 20px;
   height: 20px;
@@ -44,14 +53,14 @@
 }
 
 .space-selection label {
-  height: 75px;
+  height: 0px;
 }
 
 
 .first-slide {
   background-color: rgba(211, 211, 211, 0);
   border-radius: 25px;
-  margin-top: 125px;
+  margin-top: 50px;
   margin-bottom: 0px;
   margin-right: 40px;
   margin-left: 40px;
@@ -64,21 +73,19 @@
 }
 
 .first-slide label {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
-[type="radio"]:not(:checked) + label:before, 
+[type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after {
     border: 2px solid white;
 }
 
 .first-slide h3 {
-  margin: 0 50px;
+  margin: 0 5px;
   padding: 5%;
 }
 
 .tumblr-slick img {
     margin: 0 auto;
 }
-
-

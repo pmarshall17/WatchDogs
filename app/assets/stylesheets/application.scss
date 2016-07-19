@@ -120,8 +120,9 @@ h1.info-title {
 }
 h1, h3{
   color:rgb(255,255,255);
-  text-shadow: 2px 1px 2px #969696;
+  text-shadow: 2px 2px #3E4A49;
 }
+
 .info-jump {
   display: block;
 }
@@ -143,7 +144,7 @@ h1, h3{
   padding: 15px;
 }
 .info-box {
-  padding-bottom: 26%;
+  // padding-bottom: 26%;
   background-repeat:no-repeat !important;
   background-size: cover !important;
 }
@@ -185,7 +186,7 @@ h1, h3{
   color:rgb(255,255,255);
 }
 .info-nav li:hover a {
-  color:#256f93;
+  color:#3E4A49;
 }
 .info-box.dogs{
   padding: 11% 0 15% 0;
@@ -201,6 +202,7 @@ h1, h3{
 // Cards
 .card .card-title {
   font-size: 19px;
+  text-shadow: 2px 2px #3E4A49
 }
 
 // Content
