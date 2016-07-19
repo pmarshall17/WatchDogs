@@ -41,7 +41,7 @@ body {
 }
 
 .page-wrap {
-
+  min-height:100vh;
 }
 
 // Overwrite default font
@@ -90,7 +90,7 @@ body nav .mdi-navigation-menu{
   padding: 0 27px;
 }
 .side-nav li a {
-  color: #cacaca;
+  color: #e6e6e6;
   font-size: 21px;
   line-height: 60px;
 }
@@ -105,7 +105,7 @@ ul li{
 // Info Page
 
 // .vet-jobs {
-//   width: 
+//   width:
 // }
 
 .chart td {
