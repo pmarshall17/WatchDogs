@@ -56,6 +56,7 @@ html {
     font-family: "Poster";
     text-align: center;
     font-size: 75px;
+    color:  #3E4A49;
 }
 nav{
   background:none;
@@ -84,7 +85,7 @@ body nav .mdi-navigation-menu{
   margin:0;
 }
 .side-nav li:hover {
-  border-left: 3px solid #515a4b;
+  border-left: 3px solid #3E4A49;
 }
 .side-nav li:hover a {
   padding: 0 27px;
@@ -179,7 +180,7 @@ h1, h3{
   padding: 0 6px;
 }
 .info-nav li:hover{
-  border-left: #256f93 3px solid;
+  border-left: #3E4A49 3px solid;
 }
 .info-nav a {
   font-size:19px;
