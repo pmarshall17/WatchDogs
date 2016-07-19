@@ -1,115 +1,114 @@
-<div class="quiz-pic col s12">
- <div class="col m8 l4">
- </div>
- </div>
+<div class="row">
+  <div class='quiz col s6'>
+  <h1 style="text-align: center;">Personality Quiz</h1>
+    <form id='quiz-form' action='/quizzes/form' method='POST'>
+      <div class='first-slide center'>
+        <div class='center col s12 m6 space-selection'>
+          <h3>Where are you living?</h3>
 
-<div class='row'>
+          <div class='col s12 m3 offset-m3'>
+            <i class='fa fa-building-o fa-5x quiz-apt' aria-hidden='true'></i>
+            <input class='slick-form apt-check' name='apartment' type='radio' id='apartment'/>
+            <label for='apartment'>Apartment</label>     
+          </div>
+            
+          <div class='col s12 m3'>
+            <i class='fa fa-home fa-5x quiz-house' aria-hidden='true'></i>
+            <input class='slick-form house-check' name='house' type='radio' id='house'/>
+            <label for='house'>House</label>
+          </div>
+        </div>
 
-<div class='quiz col s12'>
+        <div class='center col s12 m6 space-selection'>
+          <h3>Where will you spend the most time with your dog?</h3>
 
-  <form id='quiz-form' action='/quizzes/form' method='POST'>
-    <div class='first-slide center'>
+          <div class='col s12 m3 offset-m3'>
+            <i class='fa fa-tree fa-5x quiz-outside' aria-hidden='true'></i>
+            <input class='slick-form outside-check' name='outside' type='radio' id='outside' />
+            <label for='outside'>Outside</label>
+          </div>
 
-      <div class='center col s12 m6 space-selection'>
-        <h3>Where are you living?</h3>
-
-        <div class='col s12 m3 offset-m3'>
-          <i class='fa fa-building-o fa-5x quiz-apt' aria-hidden='true'></i>
-          <input class='slick-form apt-check' name='apartment' type='radio' id='apartment'/>
-          <label for='apartment'>Apartment</label>     
+          <div class='col s12 m3'>     
+            <i class='fa fa-gamepad fa-5x quiz-inside' aria-hidden='true'></i>
+            <input class='slick-form inside-check' name='inside' type='radio' id= 'inside' />
+            <label for='inside'>Inside</label>
+          </div>
         </div>
           
-        <div class='col s12 m3'>
-          <i class='fa fa-home fa-5x quiz-house' aria-hidden='true'></i>
-          <input class='slick-form house-check' name='house' type='radio' id='house'/>
-          <label for='house'>House</label>
-        </div>
-      </div>
+        <div class='center col s12 m6 space-selection'>
+          <h3>Do you prefer a male or female dog?</h3>
 
-      <div class='center col s12 m6 space-selection'>
-        <h3>Where will you spend the most time with your dog?</h3>
+          <div class='col s12 m3 offset-m3'>
+            <i class='fa fa-male fa-5x quiz-male' aria-hidden='true'></i>
+            <input class='slick-form male-check' name='male' type='radio' id='male' />
+            <label for='male'>Male</label>
+          </div>
 
-        <div class='col s12 m3 offset-m3'>
-          <i class='fa fa-tree fa-5x quiz-outside' aria-hidden='true'></i>
-          <input class='slick-form outside-check' name='outside' type='radio' id='outside' />
-          <label for='outside'>Outside</label>
-        </div>
-
-        <div class='col s12 m3'>     
-          <i class='fa fa-gamepad fa-5x quiz-inside' aria-hidden='true'></i>
-          <input class='slick-form inside-check' name='inside' type='radio' id= 'inside' />
-          <label for='inside'>Inside</label>
-        </div>
-      </div>
-        
-      <div class='center col s12 m6 space-selection'>
-        <h3>Do you prefer a male or female dog?</h3>
-
-        <div class='col s12 m3 offset-m3'>
-          <i class='fa fa-male fa-5x quiz-male' aria-hidden='true'></i>
-          <input class='slick-form male-check' name='male' type='radio' id='male' />
-          <label for='male'>Male</label>
+          <div class='col s12 m3'>
+            <i class='fa fa-female fa-5x quiz-female' aria-hidden='true'></i>
+            <input class='slick-form female-check' name='female' type='radio' id='female'  />
+            <label for='female'>Female</label>
+          </div>
         </div>
 
-        <div class='col s12 m3'>
-          <i class='fa fa-female fa-5x quiz-female' aria-hidden='true'></i>
-          <input class='slick-form female-check' name='female' type='radio' id='female'  />
-          <label for='female'>Female</label>
+        <div class='center col s12 m6'>
+          <h3>Age?</h3>
+
+          <div class='col s12 m3'>
+            <i class='fa fa-paw fa-2x quiz-baby' aria-hidden='true'></i>
+            <br />
+            <input class='slick-form baby-check' name='baby' type='radio' id='baby' />
+            <label for='baby'>Baby</label>
+          </div>
+
+          <div class='col s12 m3'>
+            <i class='fa fa-paw fa-3x quiz-young' aria-hidden='true'></i>
+            <input class='slick-form young-check' name='young' type='radio' id='young' />
+            <label for='young'>Young</label>
+          </div>
+
+          <div class='col s12 m3'>
+            <i class='fa fa-paw fa-4x quiz-adult' aria-hidden='true'></i>
+            <input class='slick-form adult-check' name='adult' type='radio' id='adult' />
+            <label for='adult'>Adult</label>
+          </div>
+
+          <div class='col s12 m3'>
+           <i class='fa fa-paw fa-5x quiz-senior' aria-hidden='true'></i>
+            <input class='slick-form' name='senior' type='radio' id='senior' />
+            <label for='senior'>Senior</label>  
+          </div> 
         </div>
-      </div>
 
-      <div class='center col s12 m6'>
-        <h3>Age?</h3>
-
-        <div class='col s12 m3'>
-          <i class='fa fa-paw fa-2x quiz-baby' aria-hidden='true'></i>
+        <div class='center col s12 m6 '>
+          <h3>What's your zipcode?</h3>
+          <i class='fa fa-compass fa-3x compass-icon' aria-hidden='true'></i>
+          <input class='slick-form' name='inside' type='radio' id='inside' />
+          <input class='slick-form' type='number' 
+                 name='zip' placeholder='zipcode'
+                 id='zipcode' />
+          <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
           <br />
-          <input class='slick-form baby-check' name='baby' type='radio' id='baby' />
-          <label for='baby'>Baby</label>
+          
+          <div class="row">
+            <button class='btn waves-effect waves-light submit-btn' id='quiz-submit' type='submit'>Submit
+              <i class='material-icons right'>send</i>
+            </button>
+          </div>
         </div>
 
-        <div class='col s12 m3'>
-          <i class='fa fa-paw fa-3x quiz-young' aria-hidden='true'></i>
-          <input class='slick-form young-check' name='young' type='radio' id='young' />
-          <label for='young'>Young</label>
-        </div>
-
-        <div class='col s12 m3'>
-          <i class='fa fa-paw fa-4x quiz-adult' aria-hidden='true'></i>
-          <input class='slick-form adult-check' name='adult' type='radio' id='adult' />
-          <label for='adult'>Adult</label>
-        </div>
-
-        <div class='col s12 m3'>
-         <i class='fa fa-paw fa-5x quiz-senior' aria-hidden='true'></i>
-          <input class='slick-form' name='senior' type='radio' id='senior' />
-          <label for='senior'>Senior</label>  
-        </div> 
-      </div>
-
-      <div class='center col s12 m6 '>
-        <h3>What's your zipcode?</h3>
-        <i class='fa fa-compass fa-3x compass-icon' aria-hidden='true'></i>
-        <input class='slick-form' name='inside' type='radio' id='inside' />
-        <input class='slick-form' type='number' 
-               name='zip' placeholder='zipcode'
-               id='zipcode' />
-        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
-        <br />
-        
-        <div class="row">
-          <button class='btn waves-effect waves-light submit-btn' id='quiz-submit' type='submit'>Submit
-            <i class='material-icons right'>send</i>
-          </button>
+        <div class='center col s12 m6'>
+          <h3 class="">Loading Results...</h3>
+          <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+          <p class='slick-form'></p>
         </div>
       </div>
-
-      <div class='center col s12 m6'>
-        <h3 class="">Loading Results...</h3>
-        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-        <p class='slick-form'></p>
-      </div>
+    </form>
+  </div>
+  <div class="container">
+    <div class="quiz-pic col s12 m12 l6">
+      <img class="responsive-img" src=<%=asset_path("new_quiz_pic.jpg")%>>
     </div>
-  </form>
+  </div> 
 </div>
-</div>
+
