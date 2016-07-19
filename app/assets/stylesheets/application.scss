@@ -25,6 +25,17 @@ body {
 }
 
 
+@font-face {
+  font-family: "Poster";
+  src: font-url("Poster.ttf") format("truetype");
+}
+
+.watchdogs {
+  font-family: "Poster";
+  color: black;
+  font-size: 7.5em;
+}
+
 .page-wrap {
 
 }
