@@ -1,113 +1,112 @@
 <div class="information-page">
 
   <!-- Info Nav -->
-  <div class="info-nav">
-    <div class="container">
-      <ul>
+  <div class="row">
+    <div class="info-nav">
+
+      <ul class="col s12 m6">
         <li><a href="#ptsd-jump">PTSD</a></li>
         <li><a href="#veterans-jump">Veterans</a></li>
         <li><a href="#dogs-jump">Man's Best Friend</a></li>
         <li><a href="#resources-jump">Resources</a></li>
       </ul>
+      <div class="col s12 m6">
+        <h1 class="info-title">Info</h1>
+      </div>
+
     </div>
   </div>
 
-  <div class="container">
-    <h1 class="info-title">Info</h1>
-  </div>
 
-  <div  class="info-box ptsd col s12">
-    <div id="ptsd-jump" class="row container scrollspy">
-      <div class="col m8 l5">
+
+  <div class="info-box ptsd col s12">
+    <div id="ptsd-jump" class="row scrollspy">
+      <div class="col m4 offset-m1">
         <h4>Post Traumatic Stress Disorder</h4>
-        <p class="info-text">Information on thesymptom itself</p>
-      </div>
-    </div>
-    <div id="ptsd-jump2" class="row container scrollspy">
-      <div class="col m8 l5">
         <p>5 reasons adjustment into Civilian life can be hard</p>
-        <p>• You miss the camaraderie</p>
-        <p>• You miss the lifestyle</p>
-        <p>• You miss playing with guns and blowing shit up. Then getting paid for it</p>
-        <p>• You’re an elitist</p>
-        <p>• You dont talk enough </p>
-        <a href="http://taskandpurpose.com/5-actual-reasons-youre-miserable-after-the-military/"> Full article on Task & Purpose Here</a>
+        <ul>
+          <li>You miss the camaraderie</li>
+          <li>You miss the lifestyle</li>
+          <li>You miss playing with guns and blowing shit up. Then getting paid for it</li>
+          <li>You’re an elitist</li>
+          <li>You dont talk enough </li>
+        </ul>
+        <br />
+        <p>See full article on <a href="http://taskandpurpose.com/5-actual-reasons-youre-miserable-after-the-military/" target="_blank" rel="nofollow" >Task & Purpose</a></p>
+        <br />
+
+        <img src=<%=asset_path"ptsd.png"%> class="responsive-img">
       </div>
     </div>
-    <div id="ptsd-jump2" class="row container scrollspy">
-      <div class="col m8 l5">
-        <p><img src=<%=asset_path"ptsd.png"%>></p>
-      </div>
-    </div>
+
   </div>
 
 
   <div class="info-box veterans-info col s12">
-    <div id="veterans-jump" class="row container scrollspy">
-      <div class="col m8 l4">
+    <div id="veterans-jump" class="row scrollspy">
+      <div class="ibox-text col offset-m1 m7">
         <h4>Veterans</h4>
-          <hr/>
-          <div id="wrapper">
-             <div class="chart">
-                <h3>TOP 10 STATES WITH LARGEST VETERAN POPULATION</h3>
-                <table>
-                  <tr>
-                    <th>State</th>
-                    <th>Veterans</th>
-                  </tr>
-                  <tr>
-                    <td>California</td>
-                    <td>1,851,470</td>
-                  </tr>
-                  <tr>
-                    <td>Texas</td>
-                    <td>1,680,418</td>
-                  </tr>
-                  <tr>
-                    <td>Florida</td>
-                    <td>1,583,697</td>
-                  </tr>
-                  <tr>
-                    <td>Pennsylvania</td>
-                    <td>939,069</td>
-                  </tr>
-                  <tr>
-                    <td>New York</td>
-                    <td>892,221</td>
-                  </tr>
-                  <tr>
-                    <td>Ohio</td>
-                    <td>866,481</td>
-                  </tr>
-                  <tr>
-                    <td>Virginia</td>
-                    <td>781,388</td>
-                  </tr>
-                  <tr>
-                    <td>North Carolina</td>
-                    <td>775,020</td>
-                  </tr>
-                  <tr>
-                    <td>Georgia</td>
-                    <td>752,882</td>
-                  </tr>
-                   <tr>
-                    <td>Illinois</td>
-                    <td>721,575</td>
-                  </tr>
-                </table>
-             </div>
+        <hr />
+        <div id="wrapper row">
+          <div class="chart col s12 m3">
+            <h5>TOP 10 STATES WITH LARGEST VETERAN POPULATION</h5>
+            <table>
+              <tr>
+                <th>State</th>
+                <th>Veterans</th>
+              </tr>
+              <tr>
+                <td>California</td>
+                <td>1,851,470</td>
+              </tr>
+              <tr>
+                <td>Texas</td>
+                <td>1,680,418</td>
+              </tr>
+              <tr>
+                <td>Florida</td>
+                <td>1,583,697</td>
+              </tr>
+              <tr>
+                <td>Pennsylvania</td>
+                <td>939,069</td>
+              </tr>
+              <tr>
+                <td>New York</td>
+                <td>892,221</td>
+              </tr>
+              <tr>
+                <td>Ohio</td>
+                <td>866,481</td>
+              </tr>
+              <tr>
+                <td>Virginia</td>
+                <td>781,388</td>
+              </tr>
+              <tr>
+                <td>North Carolina</td>
+                <td>775,020</td>
+              </tr>
+              <tr>
+                <td>Georgia</td>
+                <td>752,882</td>
+              </tr>
+              <tr>
+                <td>Illinois</td>
+                <td>721,575</td>
+              </tr>
+            </table>
           </div>
-          <hr/>
-      </div>
-    </div>
-    <div id="veterans-jump" class="veterans2" class="row container scrollspy">
-      <div class="col m8 l4">
-        <h4>(this should go next to the chart of states)</h4>
-          <h5>“The U.S. military today is gradually becoming a separate warrior class, many analysts say, that is becoming increasingly distinct from the public it is charged with protecting.“</h5>
-          <h5>“The segregation is so pronounced that it can be traced on a map: Some 49% of the 1.3 million active-duty service members in the U.S. are concentrated in just five states — California, Virginia, Texas, North Carolina and Georgia.”
-          </h5>
-        <img src=<%=asset_path("vets_locations.png")%>>
+          <div class="col s12 offset-m1 m8">
+            <div class="wrapper">
+              <img class="responsive-img" src=<%=asset_path("vets_locations.png")%>>
+              <p>“The U.S. military today is gradually becoming a separate warrior class, many analysts say, that is becoming increasingly distinct from the public it is charged with protecting.“</p>
+              <p>“The segregation is so pronounced that it can be traced on a map: Some 49% of the 1.3 million active-duty service members in the U.S. are concentrated in just five states — California, Virginia, Texas, North Carolina and Georgia.”
+              </p>
+            </div>
+          </div>
+        </div>
+          <hr />
       </div>
     </div>
   </div>
@@ -116,36 +115,29 @@
 
   <div class="info-box dogs col s12">
     <div id="dogs-jump" class="row container scrollspy">
-      <div class="col m8 l4">
+      <div class="ibox-text col m8 l4">
 
         <h4>Facts:</h4>
-        <p class="info-text"> 
-           fact is: this is not a medical treatment officially recognized by the VA. They only pay for treatments and vet bills for those with designated service dog labels which are generally given to those with physical diability..
+        <p class="info-text">
+          fact is: this is not a medical treatment officially recognized by the VA. They only pay for treatments and vet bills for those with designated service dog labels which are generally given to those with physical diability..
         </p>
         <hr/>
-          <p>what the VA is doing is investing $12 million into the research of theses ptsd effects and what dogs have on them with the help of universities all over the world</p>
+        <p>what the VA is doing is investing $12 million into the research of theses ptsd effects and what dogs have on them with the help of universities all over the world</p>
       </div>
     </div>
     <div id="dogs-jump" class="row container scrollspy">
-      <div class="col m8 l4">
+      <div class="ibox-text col m8 l4">
         <h4>Why dogs?</h4>
-        <p class="info-text"> 
-          <p>• Help bring out feelings of love </p>
-          <p>• Are good companions. </p>
-          <p>• Take orders well when trained</p>
-          <p>• Are fun and can help reduce stress.</p>
-          <p>• Are a good reason to get out of the house, spend time outdoors, and meet new people. </p>
+        <p class="info-text">
+          <li>Help bring out feelings of love </li>
+          <li>Are good companions. </li>
+          <li>Take orders well when trained</li>
+          <li>Are fun and can help reduce stress.</li>
+          <li>Are a good reason to get out of the house, spend time outdoors, and meet new people. </li>
         </p>
       </div>
     </div>
-    <div id="dogs-jump" class="row container scrollspy">
-      <div class="col m8 l4">  
-        <h4>Research</h4>  
-        <p>  
-        The best research eva here
-        </p>
-      </div>
-    </div>
+
   </div>
 
 
@@ -154,6 +146,7 @@
       <div class="col m8 l5">
 
         <h4>Resources</h4>
+<<<<<<< HEAD
         <p class="info-text"><iframe width="auto" height="auto" src="https://www.youtube.com/embed/videoseries?list=PLY68Rr6ot1i6pG01Tf2Y2IbXL1m7A88d3" frameborder="0" allowfullscreen></iframe></p>
       
 
@@ -165,33 +158,43 @@
   </div>
 
   <div class="tumblr-photos col s12 m6"> 
+=======
+        <p class="info-text"><iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLY68Rr6ot1i6pG01Tf2Y2IbXL1m7A88d3" frameborder="0" allowfullscreen></iframe>
+          Sunt sirloin spare ribs corned beef dolor dolore do velit flank tail. Nostrud meatloaf pariatur, consequat alcatra nisi ham short ribs nulla aute. Aliqua dolor shank ea in ham hock. Pork belly cupim dolore dolore, boudin in magna irure culpa voluptate brisket chicken. Kielbasa pork dolore, ham consectetur et qui exercitation short loin frankfurter eu jerky. Ground round nisi kielbasa minim. Ullamco meatball fugiat cupim ut pastrami quis pork chop brisket culpa est ham consequat pork sunt</p>
 
-    <div class="tumblr-photos col s12 m6">
-      <div class="tumblr-slick center">
-        <img src="http://www.aim.org/wp-content/uploads/2015/12/16545641747_d889098550_afghanistan-military-dogs1.jpg" height="400" width="300">
+          <p class="info-text"><iframe src="https://embed-ssl.ted.com/talks/sebastian_junger_our_lonely_society_makes_it_hard_to_come_home_from_war.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>Sunt sirloin spare ribs corned beef dolor dolore do velit flank tail. Nostrud meatloaf pariatur, consequat alcatra nisi ham short ribs nulla aute. Aliqua dolor shank ea in ham hock. Pork belly cupim dolore dolore, boudin in magna irure culpa voluptate brisket chicken. Kielbasa pork dolore, ham consectetur et qui exercitation short loin frankfurter eu jerky. Ground round nisi kielbasa minim. Ullamco meatball fugiat cupim ut pastrami quis pork chop brisket culpa est ham consequat pork sunt</p>
+
+          <p><img src=<%=asset_path"vets_jobs.png"%>></p>
+        </div>
       </div>
     </div>
 
     <div class="tumblr-photos col s12 m6">
-      <div class="tumblr-slick center">
-        <img src="https://s-media-cache-ak0.pinimg.com/564x/61/39/de/6139decd936376b23097435a61779b63.jpg" height="450" width="300">
-      </div>
-    </div>
+>>>>>>> e54b052da8ffa824e8325a59ef0294af265b96f5
 
-    <div class="tumblr-photos col s12 m6">
-      <div class="tumblr-slick center">
-        <img src="http://healveterans.com/wp-content/uploads/2016/02/v3b_carlos-vera-0411.jpg" height="450" width="300">
-      </div>
-    </div>
 
-    <div class="tumblr-photos col s12 m6">
-      <div class="tumblr-slick center">
-        <img src="http://healveterans.com/wp-content/uploads/2016/02/h6_carlos-vera-0655.jpg" height="400" width="650">
+      <div class="tumblr-photos col s12 m6">
+        <div class="tumblr-slick center">
+          <img src="http://www.aim.org/wp-content/uploads/2015/12/16545641747_d889098550_afghanistan-military-dogs1.jpg" height="400" width="300">
+        </div>
+      </div>
+
+      <div class="tumblr-photos col s12 m6">
+        <div class="tumblr-slick center">
+          <img src="https://s-media-cache-ak0.pinimg.com/564x/61/39/de/6139decd936376b23097435a61779b63.jpg" height="450" width="300">
+        </div>
+      </div>
+
+      <div class="tumblr-photos col s12 m6">
+        <div class="tumblr-slick center">
+          <img src="http://healveterans.com/wp-content/uploads/2016/02/v3b_carlos-vera-0411.jpg" height="450" width="300">
+        </div>
+      </div>
+
+      <div class="tumblr-photos col s12 m6">
+        <div class="tumblr-slick center">
+          <img src="http://healveterans.com/wp-content/uploads/2016/02/h6_carlos-vera-0655.jpg" height="400" width="650">
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-

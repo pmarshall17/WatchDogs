@@ -16,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<!-- <% klazz = params[:controller] == 'dogs' && params[:action] == 'index' ? 'generate-search' : '' %>
-<body class=<%= klazz %>> -->
+<% klazz = params[:controller] == 'quizzes' && params[:action] == 'index' ? 'quiz-pic' : '' %>
+<body class=<%= klazz %>>
   <div class='page-wrap'>
     <%= render(partial: 'layouts/nav') %>
     <p class="notice"><%= notice %></p>
