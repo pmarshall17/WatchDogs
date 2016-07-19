@@ -30,8 +30,8 @@ $(document).ready( function(){
 // Quiz Icon clickable
 
   // Where are you living?
-  
-  $('.quiz-house').click(function(event) {  
+
+  $('.quiz-house').click(function(event) {
     that = $('house-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -40,7 +40,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-apt').click(function(event) {  
+  $('.quiz-apt').click(function(event) {
     that = $('apt-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -51,7 +51,7 @@ $(document).ready( function(){
 
   // Where will you spend most time with your dog?
 
-  $('.quiz-outside').click(function(event) {  
+  $('.quiz-outside').click(function(event) {
     that = $('outside-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -60,7 +60,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-inside').click(function(event) {  
+  $('.quiz-inside').click(function(event) {
     that = $('apt-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -71,7 +71,7 @@ $(document).ready( function(){
 
   // Do you prefer Male or Female?
 
-  $('.quiz-male').click(function(event) {  
+  $('.quiz-male').click(function(event) {
     that = $('male-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -80,7 +80,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-female').click(function(event) {  
+  $('.quiz-female').click(function(event) {
     that = $('female-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -91,7 +91,7 @@ $(document).ready( function(){
 
   // Age?
 
-  $('.quiz-baby').click(function(event) {  
+  $('.quiz-baby').click(function(event) {
     that = $('baby-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -100,7 +100,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-young').click(function(event) {  
+  $('.quiz-young').click(function(event) {
     that = $('young-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -109,7 +109,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-adult').click(function(event) {  
+  $('.quiz-adult').click(function(event) {
     that = $('adult-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -118,7 +118,7 @@ $(document).ready( function(){
     }, 300);
   });
 
-  $('.quiz-senior').click(function(event) {  
+  $('.quiz-senior').click(function(event) {
     that = $('senior-check')
     that.prop('checked', !that.is(':checked'));
     setTimeout(function() {
@@ -127,4 +127,3 @@ $(document).ready( function(){
     }, 300);
   });
 })
-
