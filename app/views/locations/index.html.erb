@@ -1,28 +1,30 @@
- <div class="container">
+ <div class="container min-height">
   <div>
     <h5 style="color: white; text-align: center;">Type "animal shelters" and your zip code, or search what you feel</h5>
     <div class="col s12 m12"> <%=render(partial: 'form')%> </div>      
   </div>
   <div class="row">
-    <% if @yelp_results %>
-    <div id="map" class="col s12 m6" style='height: 600px;'></div>
-    <% end %> 
-  </div>
-  <div style="float: right;">
-    <% if @yelp_results %>
-    <% @yelp_results.businesses.each do |yelp| %>
+    <div class="col s12 m5">
+      <% if @yelp_results %>
+      <div id="map" class="col s12 m6" style='height: 600px;'></div>
+      <% end %> 
+    </div>
     <div class="col s12 m4">
-     <p><b>Shelter: </b><%= yelp.name %></p>
-     <p><b>Rating: </b><%= yelp.rating %></p>
-     <p><b>Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
-     <p><b>Address: </b><%= yelp.location.display_address.first %></p>
-     <p><%= yelp.location.display_address.last %></p>
-     <p><b>Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
-     <p><a target="_blank" href="<%= yelp.mobile_url %>">Click here for site link</a></p>
-     <hr/>
-   </div>
-   <% end %>
- </div>
+      <% if @yelp_results %>
+        <% @yelp_results.businesses.each do |yelp| %>
+        <div>
+          <p><b>Shelter: </b><%= yelp.name %></p>
+          <p><b>Rating: </b><%= yelp.rating %></p>
+          <p><b>Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
+          <p><b>Address: </b><%= yelp.location.display_address.first %></p>
+          <p><%= yelp.location.display_address.last %></p>
+          <p><b>Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
+          <p><a target="_blank" href="<%= yelp.mobile_url %>">Click here for site link</a></p>
+          <hr/>
+        </div>
+      <% end %>
+    </div>
+  </div> 
  <hr/>
  
  <% end %>
