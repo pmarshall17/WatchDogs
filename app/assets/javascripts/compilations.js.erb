@@ -13,13 +13,15 @@ $(document).ready(function() {
     $('body').css('background', <%= "\'#000000 url(\"#{image_url('watchdog-home.jpg')}\") no-repeat\'" %>),
     $('body').css('background-size', '100%'),
     $('.mdi-navigation-menu').css('color', 'white')
-
+  // else (window == 
+  //   $('body').css('background', <%= "\'#000000 url(\"#{image_url('watchdog-home.jpg')}\") no-repeat\'" %>),
+  //   $('body').css('background-size', '100%'),
+  //   $('.mdi-navigation-menu').css('color', 'white')
   };
 
   if(window.location.pathname == '/dogs/index') {
     $('.mdi-navigation-menu').css('color', 'white')
   }
-
 
   // Smooth scroll
 
