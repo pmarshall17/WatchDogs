@@ -2,7 +2,7 @@
 
 $(document).ready( function(){
   $('.first-slide').slick({
-    arrows: true,
+    arrows: false,
     dots: true,
     });
   $('.slick-form').change(function() {
@@ -15,8 +15,10 @@ $(document).ready( function(){
 // Slick Info Page Carasel
 
   $('.tumblr-photos').slick({
-    arrows: true,
-    dots: true
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000
   });
   $('.tumblr-slick').change(function() {
     setTimeout(function() {

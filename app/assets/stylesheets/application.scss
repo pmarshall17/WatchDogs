@@ -12,11 +12,11 @@ $secondary-color: #424242 !default;
 @import 'quiz-result';
 
 body {
-     background: #28343b; /* Old browsers */
-   background: -moz-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* FF3.6-15 */
-   background: -webkit-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(to bottom,  #28343b 0%, #1e1e1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28343b', endColorstr='#1e1e1d',GradientType=0 );
+  background: #28343b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #28343b 0%, #1e1e1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28343b', endColorstr='#1e1e1d',GradientType=0 );
   height: 100%;
   width: 100%;
   padding: 0;
@@ -86,6 +86,10 @@ nav .mdi-navigation-menu{
 }
 
 // Info Page
+
+// .vet-jobs {
+//   width: 
+// }
 
 .chart td {
   line-height: 4px;
@@ -163,6 +167,13 @@ h1, h3{
 }
 .info-box.dogs{
   padding: 11% 0 15% 0;
+}
+
+// slick carausel
+
+.tumblr-slick {
+  width: 1000px;
+
 }
 
 // Cards
@@ -348,8 +359,14 @@ input[type=text] {
   float: right;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
 .bio {
-  text-align: center;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .team-member {
