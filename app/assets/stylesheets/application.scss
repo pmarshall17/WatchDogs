@@ -24,6 +24,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.float-left {
+  float: left;
+}
+
 
 @font-face {
   font-family: "Poster";
@@ -191,6 +195,7 @@ input[type=text] {
 }
 .yelp{
   color:whitesmoke;
+  float:right;
 }
 
 // Dogs
