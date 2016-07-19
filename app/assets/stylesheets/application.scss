@@ -73,6 +73,10 @@ nav .mdi-navigation-menu{
   background:rgba(0,0,0,.8);
   color:white;
 }
+.side-nav li{
+  list-style-type: none;
+  margin:0;
+}
 .side-nav li:hover {
   border-left: 3px solid #d4d4d4;
 }
@@ -85,6 +89,10 @@ nav .mdi-navigation-menu{
   line-height: 60px;
 }
 
+ul li{
+  list-style-type: disc;
+  margin: 0 0 0 25px;
+}
 // Info Page
 
 .chart td {
@@ -92,11 +100,10 @@ nav .mdi-navigation-menu{
 }
 
 .information-page{
-  background-color:#000000;
   color:#FFFFFF;
 }
 h1.info-title {
-  margin-top: 135px;
+
 }
 h1, h3{
   color:rgb(255,255,255);
@@ -113,10 +120,10 @@ h1, h3{
 .info-nav{
   position: fixed;
   top:0;
-  padding: 1% auto;
+  padding: 1%;
   z-index: 950;
   width:100%;
-  background: white;
+  background: black;
 }
 .information-page .container {
   margin-top: 0%;
@@ -129,7 +136,7 @@ h1, h3{
 }
 .info-box.ptsd {
   background: url("ptsd-bg.jpg");
-  padding: 11% 0 15% 0;
+  padding: 12% 0 3% 3%;
 }
 .info-box.ptsd .flow-text {
   width: 46%;
@@ -141,13 +148,19 @@ h1, h3{
 .info-box.dogs {
   background: url("dogs-info.jpg");
 }
-.info-box .col {
+.info-box .ibox-text {
   background: rgba(161, 161, 161, 0.6);
   padding: 15px 20px 25px;
   color: black;
 }
+.info-nav .row{
+  margin-bottom:0px;
+}
+.info-nav ul li, nav.ul li{
+  list-style-type: none;
+}
 .info-nav li {
-  border-left: #444444 3px solid;
+  border-left: #FFFFFF 3px solid;
   margin: 4px 0;
   padding: 0 6px;
 }
@@ -156,7 +169,7 @@ h1, h3{
 }
 .info-nav a {
   font-size:19px;
-  color:#5b5b5b;
+  color:rgb(255,255,255);
 }
 .info-nav li:hover a {
   color:#256f93;
