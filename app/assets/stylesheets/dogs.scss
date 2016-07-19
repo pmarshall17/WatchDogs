@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Breeds cards
+// Search Shelter Form
 
 .card .card-content .card-title {
   line-height: 23px;
@@ -24,18 +24,18 @@
 
 .btn-dogs {
   border-radius: 25px;
-  color: grey;
-  background-color: white;
+  color: white;
+  background-color: #424242;
 }
 .btn:hover, .btn-large:hover {
-  background-color: #256f93;
+  background-color: #e0e0e0;
   color: rgb(255,255,255);
 }
 .select-wrapper span.caret {
   color: rgba(255,255,255, .9);
 }
 .search-header {
-  text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+  text-shadow: 2px 2px #3E4A49;
   padding: 25px;
 }
 

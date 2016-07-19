@@ -19,9 +19,10 @@ class QuizzesController < ApplicationController
     if @options[:size] == 'S'
       @dogs[:schnauzer] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'schnauzer'}))
       @dogs[:beagle] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'beagle'}))
-      @dogs[:french_bull_dog] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'french bull dog'}))
+      @dogs[:french_bulldog] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'french bulldog'}))
       @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'english springer spaniel'}))
-      @dogs[:maltese] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'maltese'}))
+      @dogs[:border_collie] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'border collie'}))
+      @dogs[:yorkshire_terrier] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'yorkshire terrier'}))
       @dogs[:shih_tzu] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'shih tzu'}))
     end
 

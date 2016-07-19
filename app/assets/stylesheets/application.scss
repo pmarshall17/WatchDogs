@@ -1,6 +1,6 @@
 @import "materialize/components/color";
 $primary-color: color("black", "lighten-2") !default;
-$secondary-color: #256f93 !default;
+$secondary-color: #424242 !default;
 @import 'materialize';
 @import 'compilations.scss';
 @import 'dogs.scss';
@@ -12,11 +12,12 @@ $secondary-color: #256f93 !default;
 @import 'quiz-result';
 
 body {
-  background: #28343b; /* Old browsers */
-  background: -moz-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #28343b 0%, #1e1e1d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #28343b 0%, #1e1e1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28343b', endColorstr='#1e1e1d',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#162624+1,000f09+91,000f09+100 */
+  background: rgb(22,38,36); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(22,38,36,1) 1%, rgba(0,15,9,1) 91%, rgba(0,15,9,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(22,38,36,1) 1%,rgba(0,15,9,1) 91%,rgba(0,15,9,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(22,38,36,1) 1%,rgba(0,15,9,1) 91%,rgba(0,15,9,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162624', endColorstr='#000f09',GradientType=0 ); /* IE6-9 */
   height: 100%;
   width: 100%;
   padding: 0;
@@ -46,7 +47,7 @@ body {
 
 // Overwrite default font
 html {
-  font-family: Cabin, Trebuchet, sans-serif;
+  font-family: 'Prompt', sans-serif;
 }
 
 
@@ -336,14 +337,27 @@ input[type=text] {
 
 // Meet the Team page
 
+.team-header {
+  text-shadow: 3px 3px #3E4A49
+}
+
+.team-links {
+  color: black;
+}
+
+.contact-btn {
+  float: right;
+}
+
 .bio {
   text-align: center;
 }
 
 .team-member {
-  background: #256f93;
+  background: #3E4A49;
   padding: 19px;
   margin: 10px 0;
+  border-radius: 15px;
 }
 img.tm-member-img {
   // width: 72%;
@@ -355,7 +369,7 @@ img.tm-member-img.col.s12 {
   padding: 0px ;
 }
 .team-content a {
-  color: #256f93;
+  color: black;
   font-size: 12px;
 }
 .team-content a:hover {
