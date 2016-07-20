@@ -29,7 +29,7 @@
 }
 .btn:hover, .btn-large:hover {
   background-color: #e0e0e0;
-  color: rgb(255,255,255);
+  color: #4f4f4f;
 }
 .select-wrapper span.caret {
   color: rgba(255,255,255, .9);
@@ -54,6 +54,9 @@
 }
 .flipper h3{
   font-size: 1.92rem;
+}
+.flipper h5, .flipper p{
+  text-align:center;
 }
 
 .card-title {
