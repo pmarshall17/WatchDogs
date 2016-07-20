@@ -53,7 +53,7 @@ gem 'openurl'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry', '~>0.10.3'
+  gem 'pry'
 end
 
 group :development do

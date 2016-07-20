@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 
   def index
     if params[:term]
-      par = { term: params[:term], limit: 200 }
+      par = { term: params[:term], limit: 15 }
       @yelp_results = Yelp.client.search(params[:location], par)
       @locations = @yelp_results.businesses.map do |business| 
         {
