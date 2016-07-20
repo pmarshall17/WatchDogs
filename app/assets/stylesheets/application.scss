@@ -28,6 +28,17 @@ body {
   float: left;
 }
 
+.float-right {
+  float: right;
+}
+
+.float-right.inline-block {
+  padding: 21px
+}
+
+.inline-block {
+  display: inline-block;
+}
 
 @font-face {
   font-family: "Poster";
@@ -283,7 +294,9 @@ input[type=text] {
 // Container
 .container {
   margin-top: 2%;
+  min-height: 100vh;
 }
+
 
 //locations
 .min-height {
