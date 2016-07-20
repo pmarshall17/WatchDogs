@@ -24,7 +24,7 @@
           <p><b>Address: </b><%= yelp.location.display_address.first %></p>
           <p><%= yelp.location.display_address.last %></p>
           <p><b>Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
-          <p><a target="_blank" href="<%= yelp.mobile_url %>">Click here for site link</a></p>
+          <p><a class="site-link" target="_blank" href="<%= yelp.mobile_url %>">CLICK HERE FOR SITE LINK</a></p>
           <hr/>
         </div>
       <% end %>

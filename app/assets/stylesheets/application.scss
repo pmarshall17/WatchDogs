@@ -56,7 +56,7 @@ html {
 .side-nav a.nav-logo {
     font-family: "Poster";
     text-align: center;
-    font-size: 75px;
+    font-size: 60px;
 }
 nav{
   background:none;
@@ -287,6 +287,14 @@ input[type=text] {
 //locations
 .min-height {
   min-height: 100vh;
+}
+
+b {
+  color: #0066ff;
+}
+
+.site-link {
+  color: #228B22;
 }
 
 // About Us
