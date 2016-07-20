@@ -58,7 +58,7 @@ p {
     font-size: 60px;
     color:  white;
   }
-  
+
 nav{
   background:none;
   box-shadow:none;
@@ -290,8 +290,8 @@ input[type=text] {
   min-height: 100vh;
 }
 
-b {
-  color: #0066ff;
+.back b {
+  color: #2361b3;
 }
 
 .site-link {
@@ -399,8 +399,9 @@ b {
 .contact-btn {
   float: right;
 }
-
-
+.features-list{
+  margin-left:25px;
+}
 
 .bio {
   text-align: left;
@@ -417,7 +418,7 @@ img.tm-member-img {
   // width: 72%;
   border-radius: 50%;
   margin: auto 5%;
-  border: #494545 solid 7px;
+  border: #000000 solid 7px;
 }
 img.tm-member-img.col.s12 {
   padding: 0px ;
@@ -427,11 +428,15 @@ img.tm-member-img.col.s12 {
   font-size: 12px;
 }
 .team-content a:hover {
-  color: #494545;
+  color: #2361b3;
 }
 .team-member .row {
   margin: 0 -0.75rem;
 }
+p.team-text {
+    text-align: center;
+}
+
 
 // .side-nav li:first-child{
 //   right:25px;
