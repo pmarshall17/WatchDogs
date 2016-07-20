@@ -40,16 +40,15 @@ body {
   font-size: 7.5em;
 }
 
-.page-wrap {
- min-height: 100vh;
- margin-top: 10%;
-}
 
 // Overwrite default font
 html {
   font-family: 'Prompt', sans-serif;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 // Navigation
@@ -57,7 +56,9 @@ html {
     font-family: "Poster";
     text-align: center;
     font-size: 60px;
-}
+    color:  white;
+  }
+  
 nav{
   background:none;
   box-shadow:none;
@@ -85,7 +86,7 @@ body nav .mdi-navigation-menu{
   margin:0;
 }
 .side-nav li:hover {
-  border-left: 3px solid #515a4b;
+  border-left: 3px solid #3E4A49;
 }
 .side-nav li:hover a {
   padding: 0 27px;
@@ -180,7 +181,7 @@ h1, h3{
   padding: 0 6px;
 }
 .info-nav li:hover{
-  border-left: #256f93 3px solid;
+  border-left: #3E4A49 3px solid;
 }
 .info-nav a {
   font-size:19px;
@@ -399,9 +400,6 @@ b {
   float: right;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
 
 
 .bio {
@@ -440,7 +438,7 @@ img.tm-member-img.col.s12 {
 // }
 .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
   border-left: 0px;
-  color: #515a4b;
+  color: #3E4A49;
   font-weight:700;
 }
 .side-nav li:hover:first-child a{
