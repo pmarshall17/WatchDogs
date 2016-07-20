@@ -40,16 +40,15 @@ body {
   font-size: 7.5em;
 }
 
-.page-wrap {
- min-height: 100vh;
- margin-top: 10%;
-}
 
 // Overwrite default font
 html {
   font-family: 'Prompt', sans-serif;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 // Navigation
@@ -57,7 +56,7 @@ html {
     font-family: "Poster";
     text-align: center;
     font-size: 75px;
-    color:  #3E4A49;
+    color:  white;
 }
 nav{
   background:none;
@@ -392,9 +391,6 @@ input[type=text] {
   float: right;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
 
 
 .bio {
@@ -433,7 +429,7 @@ img.tm-member-img.col.s12 {
 // }
 .side-nav li:hover:first-child, .side-nav li:hover:first-child a {
   border-left: 0px;
-  color: #515a4b;
+  color: #3E4A49;
   font-weight:700;
 }
 .side-nav li:hover:first-child a{
