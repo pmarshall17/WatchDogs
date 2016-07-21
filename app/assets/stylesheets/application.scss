@@ -10,6 +10,7 @@ $secondary-color: #424242 !default;
 @import 'quizzes.scss';
 @import 'devise/*';
 @import 'quiz-result';
+@import 'locations.scss';
 
 body {
   background: #28343b; /* Old browsers */
@@ -65,7 +66,7 @@ p {
 // Navigation
 .side-nav a.nav-logo {
     font-family: "Poster";
-    text-align: center;
+    text-align: left;
     font-size: 60px;
     color:  white;
   }
@@ -104,7 +105,7 @@ body nav .mdi-navigation-menu{
 }
 .side-nav li a {
   color: #e6e6e6;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 60px;
 }
 .dropdown-content li{
@@ -294,13 +295,14 @@ input[type=text] {
 // Container
 .container {
   margin-top: 2%;
-  min-height: 100vh;
+
 }
 
 
 //locations
 .min-height {
   min-height: 100vh;
+  margin-top: 13%;
 }
 
 .back b {
