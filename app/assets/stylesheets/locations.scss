@@ -10,3 +10,11 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+
+
+.scrollbar {
+	height: 600px;
+	width: auto;
+	overflow-y: scroll;
+}

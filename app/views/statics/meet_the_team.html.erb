@@ -1,17 +1,15 @@
 <div class="container center">
-
-  <a class="waves-effect waves-light btn contact-btn modal-trigger" href="#modal1">Contact Us</a>
   <div class="row">
-    <div id="modal1" class="modal ">
-      <div class="modal-content">
-        <div style="text-align: center"><a href="mailto:veteranwatchdogs@gmail.com">SUBMIT EMAIL</a></div>
-        <hr/>
-        <div style="text-align: center"><a href="https://twitter.com/veteran_watch">Tweet us @veteran_watch</a></div>
-        <hr/>
-        <div style="text-align: center"><a href="#">DROP US A LINE</a></div>
-        <div style="text-align: center">(801)824-4072</div>
-      </div>
-    </div>
+    <a style="float: left;" href="mailto:veteranwatchdogs@gmail.com?subject=Watchdogs">
+      <img title="gmail" alt="gmail" src=<%=asset_path("gmail.png")%> width="60" height=auto/>
+    </a>
+    <a style="float: left;" href="https://twitter.com/veteran_watch">
+      <img title="twitter" alt="twitter" src=<%=asset_path("twitter.png")%> width="60" height=auto />
+    </a>
+    <a style="float: left;">
+      <img onclick="myFunction()" title="phone" alt="phone" src=<%=asset_path("phone.png")%> width="60" height=auto />
+      <p id="demo"></p>
+    </a>
   </div>
   <div class="container">
     <div class="col s6"><p>
