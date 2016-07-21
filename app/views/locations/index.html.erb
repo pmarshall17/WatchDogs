@@ -4,34 +4,34 @@
     <br/>
     <br/>
     <br/>
-    <div class="col s12 m12"> 
+    <div class="col s12 m12">
       <%=render(partial: 'form')%>
-    </div>      
+    </div>
   </div>
   <div class="row">
     <div class="col s12 m6">
       <% if @yelp_results %>
       <div id="map" class="col s12" style='height: 600px;'></div>
-      <% end %> 
+      <% end %>
     </div>
     <div class="scrollbar" class="col s12 m6" style="text-align: center;">
       <% if @yelp_results %>
         <% @yelp_results.businesses.each do |yelp| %>
         <div>
-          <p><b style="color: purple">Shelter: </b><%= yelp.name %></p>
-          <p><b style="color: purple">Rating: </b><%= yelp.rating %></p>
-          <p><b style="color: purple">Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
-          <p><b style="color: purple">Address: </b><%= yelp.location.display_address.first %></p>
+          <p><b style="color: red">Shelter: </b><%= yelp.name %></p>
+          <p><b style="color: red">Rating: </b><%= yelp.rating %></p>
+          <p><b style="color: red">Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
+          <p><b style="color: red">Address: </b><%= yelp.location.display_address.first %></p>
           <p><%= yelp.location.display_address.last %></p>
-          <p><b style="color: purple">Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
+          <p><b style="color: red">Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
           <p><a class="site-link" target="_blank" href="<%= yelp.mobile_url %>">CLICK HERE FOR SITE LINK</a></p>
           <hr/>
         </div>
       <% end %>
     </div>
-  </div> 
+  </div>
  <hr/>
- 
+
  <% end %>
  <% if @hash %>
    <script src="//maps.google.com/maps/api/js?v=3.23&key=AIzaSyAsyRRAL--yaE1kuFxFSN_esSKN-i2mK84"></script>
