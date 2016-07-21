@@ -10,6 +10,7 @@ $secondary-color: #424242 !default;
 @import 'quizzes.scss';
 @import 'devise/*';
 @import 'quiz-result';
+@import 'locations.scss';
 
 body {
   background: #28343b; /* Old browsers */
@@ -104,8 +105,9 @@ body nav .mdi-navigation-menu{
 }
 .side-nav li a {
   color: #e6e6e6;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 60px;
+  /*text-align: center;*/
 }
 .dropdown-content li{
   list-style-type: none;
