@@ -18,13 +18,13 @@
       <% if @yelp_results %>
         <% @yelp_results.businesses.each do |yelp| %>
         <div>
-          <p><b style="color: red">Shelter: </b><%= yelp.name %></p>
-          <p><b style="color: red">Rating: </b><%= yelp.rating %></p>
-          <p><b style="color: red">Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
-          <p><b style="color: red">Address: </b><%= yelp.location.display_address.first %></p>
+          <p><b style="color: teal">Shelter: </b><%= yelp.name %></p>
+          <p><b style="color: teal">Rating: </b><%= yelp.rating %></p>
+          <p><b style="color: teal">Category: </b><%= yelp.categories.map { |a| a.first  }.join(" / ") %></p>
+          <p><b style="color: teal">Address: </b><%= yelp.location.display_address.first %></p>
           <p><%= yelp.location.display_address.last %></p>
-          <p><b style="color: red">Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
-          <p><a class="site-link" target="_blank" href="<%= yelp.mobile_url %>">CLICK HERE FOR SITE LINK</a></p>
+          <p><b style="color: teal">Contact Number: </b><%= number_to_phone(yelp.phone) %></p>
+          <p><a style="color: green;" class="site-link" target="_blank" href="<%= yelp.mobile_url %>">CLICK HERE FOR SITE LINK</a></p>
           <hr/>
         </div>
       <% end %>
