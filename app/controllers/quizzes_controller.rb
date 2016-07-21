@@ -5,7 +5,7 @@ class QuizzesController < ApplicationController
     @options[:count] = 1
     @dogs = {}
 
-    
+
     # file = File.read(Rails.root.join('lib/breeds.json'))
     # breeds = JSON.parse(file)['data']
 
@@ -19,16 +19,16 @@ class QuizzesController < ApplicationController
     if @options[:size] == 'S'
       @dogs[:schnauzer] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'schnauzer'}))
       @dogs[:beagle] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'beagle'}))
-      @dogs[:french_bulldog] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'french bulldog'}))
-      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'english springer spaniel'}))
+      @dogs[:french_bulldog] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'bulldog'}))
+      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'spaniel'}))
       @dogs[:border_collie] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'border collie'}))
-      @dogs[:yorkshire_terrier] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'yorkshire terrier'}))
+      @dogs[:yorkshire_terrier] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'terrier'}))
       @dogs[:shih_tzu] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'shih tzu'}))
     end
 
     if @options[:size] == 'L'
       @dogs[:beagle] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'beagle'}))
-      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'english springer spaniel'}))
+      @dogs[:spaniel] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'spaniel'}))
       @dogs[:maltese] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'maltese'}))
       @dogs[:shih_tzu] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'shih tzu'}))
       @dogs[:lab] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'labrador retriever'}))
@@ -36,20 +36,19 @@ class QuizzesController < ApplicationController
       @dogs[:bloodhound] = Quiz.search("#{params[:zip]}", @options.merge({breed: 'bloodhound'}))
     end
   end
-  
+
   def form
     @params = params
     redirect_to results_path(params: @params)
-  end  
+  end
 
-  # CUSTOM QUESTIONS ROUTES 
+  # CUSTOM QUESTIONS ROUTES
 
   def question_1
 
   end
 
-  
-  private
-  
-end
 
+  private
+
+end

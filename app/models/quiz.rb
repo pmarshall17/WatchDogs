@@ -1,4 +1,4 @@
-class Quiz < ActiveRecord::Base  
+class Quiz < ActiveRecord::Base
 
   def self.search(zip, options = {})
     petfinder = Petfinder::Client.new
@@ -8,32 +8,32 @@ class Quiz < ActiveRecord::Base
   # PARSE PARAMS INTO USEABLE VARIABLES
   def self.set_options(params)
     options = {size: '', sex: '', age: '', count: 50 }
-    if params[:apartment] == 'on' || 'apt'
+    if params[:apartment] == 'on'
       options[:size] = 'S'
-    elsif params[:house] == 'on' || 'house'
+    elsif params[:house] == 'on'
       options[:size] = 'L'
     end
 
-    if params[:outside] == 'on' || 'outside'
+    if params[:outside] == 'on'
       params[:energy] = 'high'
-    elsif params[:inside] == 'on' || 'inside'
+    elsif params[:inside] == 'on'
       params[:energy] = 'low'
     end
 
-    if params[:male] == 'on' || 'male'
+    if params[:male] == 'on'
       options[:sex] = 'M'
-    elsif params[:female] == 'on' || 'female'
+    elsif params[:female] == 'on'
       options[:sex] = 'F'
     end
 
-    if params[:puppy] == 'on' || 'baby'
-      options[:age] = 'baby'
-    elsif params[:young] == 'on' || 'young'
-      options[:age] = 'young'
-    elsif params[:adult] = 'on' || 'adult'
-      options[:age] = 'adult'
-    elsif params[:senior] == 'on' || 'senior'
-      options[:age] = 'senior'
+    if params[:baby] == 'on'
+      options[:age] = 'Baby'
+    elsif params[:young] == 'on'
+      options[:age] = 'Young'
+    elsif params[:adult] == 'on'
+      options[:age] = 'Adult'
+    elsif params[:senior] == 'on'
+      options[:age] = 'Senior'
     end
    return options
   end
