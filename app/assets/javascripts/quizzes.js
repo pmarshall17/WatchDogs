@@ -61,7 +61,7 @@ $(document).ready( function(){
   // });
   //
   // $('.quiz-inside').click(function(event) {
-  //   that = $('apt-check')
+  //   that = $('inside-check')
   //   that.prop('checked', !that.is(':checked'));
   //   setTimeout(function() {
   //     console.log('inside')
