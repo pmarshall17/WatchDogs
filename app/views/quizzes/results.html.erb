@@ -1,8 +1,12 @@
 <!-- render a message(maybe just show breeds that match) if there are no dogs -->
-
+<div class="container">
+  <div style="text-align: left;"><%= link_to 'Search dogs in your area', dogs_index_path %></div>
+  <br/>
+  <div style="text-align: left;"><%= link_to 'Search shelters in your area', locations_path %></div>
+</div>
 <div class="container results min-height">
   <div class="row">
-    <h3 class="quiz-header">Based on your quiz results; we recommend:</h3>
+    <h3 class="quiz-header">Meet your new best friend!</h3>
 
     <% @dogs.keys.each do |breed| %>
     <% @dogs[breed].each do |dog| %>
