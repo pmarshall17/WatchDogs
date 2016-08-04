@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :favorites
 
+  resources :fundraisers
+
 
   get 'search' => "locations#search"
 
